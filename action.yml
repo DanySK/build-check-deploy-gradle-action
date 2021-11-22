@@ -1,0 +1,150 @@
+name: Build and delivery a Gradle project
+on:
+  workflow_call:
+    inputs:
+      build-command:
+        description: 'The command executed in the build phase'
+        default: './gradlew assemble --parallel'
+        required: false
+      check-command:
+        description: 'The command executed in the check phase'
+        default: './gradlew check --parallel'
+        required: false
+      deploy-command:
+        description: 'The condition triggering a deploy run'
+        default: "./gradlew publishKotlinMavenPublicationToMavenCentralRepository"
+        required: false
+      java-distribution:
+        description: 'The Java distrbutor to use'
+        default: "temurin"
+        required: false
+      java-version:
+        description: 'The Java version to use'
+        default: "17"
+        required: false
+      should-run-codecov:
+        description: 'True if the action should send coverage results to codecov.io'
+        default: true
+        required: false
+      should-deploy:
+        description: 'True if the deploy operation should be executed'
+        default: false
+        required: false
+      maven-central-username:
+        description: 'Username for Maven Central'
+        default: 'danysk'
+        required: false
+      custom-secret-0:
+        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_0'
+        default: ''
+        required: false
+      custom-secret-1:
+        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_1'
+        default: ''
+        required: false
+      custom-secret-2:
+        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_2'
+        default: ''
+        required: false
+      custom-secret-3:
+        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_3'
+        default: ''
+        required: false
+      custom-secret-4:
+        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_4'
+        default: ''
+        required: false
+      github-token:
+        required: false
+      gradle-publish-secret:
+        required: false
+      gradle-publish-key:
+        required: false
+      maven-central-password:
+        required: false
+      signing-key:
+        required: false
+      signing-password:
+        required: false
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-java@v2
+      with:
+        distribution: ${{ inputs.java-distribution }}
+        java-version: ${{ inputs.java-version }}
+        server-id: ossrh
+        server-username: ${{ inputs.maven-central-username }}
+        server-password: $ {{ secrets.maven-central-password }}
+        gpg-private-key: ${{ secrets.signing-key }}
+        gpg-passphrase: ${{ secrets.signing-password }}
+    - name: Checkout
+      uses: danysk/action-checkout@0.1.0
+    - name: Configure the Windows Pagefile
+      if: ${{ runner.os == 'Windows' }}
+      uses: al-cheb/configure-pagefile-action@v1.2
+    - name: Cache Gradle packages
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+          ~/.gradle/jdks
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+    - name: Build
+      shell: bash
+      run: |
+        ${{ inputs.build-command }}
+    - name: Check
+      shell: bash
+      run: |
+        ${{ inputs.check-command }}
+    - name: CodeCov
+      if: inputs.should-run-codecov
+      uses: codecov/codecov-action@v2
+    - name: Deploy
+      if: inputs.should-deploy
+      shell: bash
+      env:
+        CUSTOM_SECRET_0: ${{ inputs.custom-secret-0 }}
+        CUSTOM_SECRET_1: ${{ inputs.custom-secret-1 }}
+        CUSTOM_SECRET_2: ${{ inputs.custom-secret-2 }}
+        CUSTOM_SECRET_3: ${{ inputs.custom-secret-3 }}
+        CUSTOM_SECRET_4: ${{ inputs.custom-secret-4 }}
+        GITHUB_TOKEN: ${{ secrets.github-token }}
+        GRADLE_PUBLISH_SECRET: ${{ secrets.gradle-publish-secret }}
+        GRADLE_PUBLISH_KEY: ${{ secrets.gradle-publish-key }}
+        MAVEN_CENTRAL_PASSWORD: ${{ secrets.maven-central-password }}
+        MAVEN_CENTRAL_USERNAME: ${{ inputs.maven-central-username }}
+        ORG_GRADLE_PROJECT_signingKey: ${{ secrets.signing-key }}
+        ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.signing-password }}
+        SIGNING_PASSWORD: ${{ secrets.signing-password }}
+      run: |
+        ${{ inputs.deploy-command }}
+    - name: Cleanup
+      shell: bash
+      run: ./gradlew clean
+    - name: Turn off the Gradle Daemon
+      shell: bash
+      run: ./gradlew --stop
+    - name: Force-kill the remaining Gradle Daemons on Windows
+      if: ${{ runner.os == 'Windows' }}
+      run: |
+        WMIC PROCESS where "Name like 'java%' AND CommandLine like '%GradleDaemon%'" Call Terminate
+    - name: Cleanup the Gradle cache
+      if: ${{ runner.os != 'Windows' }}
+      shell: bash
+      run: |
+        rm -f ~/.gradle/caches/modules-2/modules-2.lock
+        rm -f ~/.gradle/caches/modules-2/gc.properties
+        rm -f ~/.gradle/jdks/*.lock
+        rm -rf ~/.gradle/jdks/*/
+    - name: Force the Gradle cleanup on Windows
+      if: ${{ runner.os == 'Windows' }}
+      run: |
+        Remove-Item -Force c:\Users\runneradmin\.gradle\caches\modules-2\modules-2.lock
+        Remove-Item -Force c:\Users\runneradmin\.gradle\caches\modules-2\gc.properties
+        Remove-Item -Force c:\Users\runneradmin\.gradle\jdks\*.lock
