@@ -131,7 +131,6 @@ runs:
       shell: bash
       run: ./gradlew --stop
     - name: Force-kill the remaining Gradle Daemons on Windows
-      shell 
       if: ${{ runner.os == 'Windows' }}
       shell: powershell
       run: |
