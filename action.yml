@@ -1,4 +1,6 @@
 name: Build and delivery a Gradle project
+description: Build and delivery a Gradle project
+
 inputs:
   build-command:
     description: 'The command executed in the build phase'
