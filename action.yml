@@ -10,6 +10,10 @@ inputs:
     description: 'The command executed in the check phase'
     default: './gradlew check --parallel'
     required: false
+  check-command:
+    description: 'The command executed in the final clean phase'
+    default: 'true'
+    required: false
   deploy-command:
     description: 'The condition triggering a deploy run'
     default: "./gradlew publishKotlinMavenPublicationToMavenCentralRepository"
@@ -126,7 +130,8 @@ runs:
         ${{ inputs.deploy-command }}
     - name: Cleanup
       shell: bash
-      run: ./gradlew clean
+      run: |
+        ${{ inputs.clean-command }}
     - name: Turn off the Gradle Daemon
       shell: bash
       run: ./gradlew --stop
