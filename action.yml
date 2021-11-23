@@ -76,9 +76,9 @@ runs:
         java-version: ${{ inputs.java-version }}
         server-id: ossrh
         server-username: ${{ inputs.maven-central-username }}
-        server-password: $ {{ secrets.maven-central-password }}
-        gpg-private-key: ${{ secrets.signing-key }}
-        gpg-passphrase: ${{ secrets.signing-password }}
+        server-password: $ {{ inputs.maven-central-password }}
+        gpg-private-key: ${{ inputs.signing-key }}
+        gpg-passphrase: ${{ inputs.signing-password }}
     - name: Checkout
       uses: danysk/action-checkout@0.1.0
     - name: Configure the Windows Pagefile
@@ -114,14 +114,14 @@ runs:
         CUSTOM_SECRET_2: ${{ inputs.custom-secret-2 }}
         CUSTOM_SECRET_3: ${{ inputs.custom-secret-3 }}
         CUSTOM_SECRET_4: ${{ inputs.custom-secret-4 }}
-        GITHUB_TOKEN: ${{ secrets.github-token }}
-        GRADLE_PUBLISH_SECRET: ${{ secrets.gradle-publish-secret }}
-        GRADLE_PUBLISH_KEY: ${{ secrets.gradle-publish-key }}
-        MAVEN_CENTRAL_PASSWORD: ${{ secrets.maven-central-password }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        GRADLE_PUBLISH_SECRET: ${{ inputs.gradle-publish-secret }}
+        GRADLE_PUBLISH_KEY: ${{ inputs.gradle-publish-key }}
+        MAVEN_CENTRAL_PASSWORD: ${{ inputs.maven-central-password }}
         MAVEN_CENTRAL_USERNAME: ${{ inputs.maven-central-username }}
-        ORG_GRADLE_PROJECT_signingKey: ${{ secrets.signing-key }}
-        ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.signing-password }}
-        SIGNING_PASSWORD: ${{ secrets.signing-password }}
+        ORG_GRADLE_PROJECT_signingKey: ${{ inputs.signing-key }}
+        ORG_GRADLE_PROJECT_signingPassword: ${{ inputs.signing-password }}
+        SIGNING_PASSWORD: ${{ inputs.signing-password }}
       run: |
         ${{ inputs.deploy-command }}
     - name: Cleanup
@@ -131,7 +131,9 @@ runs:
       shell: bash
       run: ./gradlew --stop
     - name: Force-kill the remaining Gradle Daemons on Windows
+      shell 
       if: ${{ runner.os == 'Windows' }}
+      shell: powershell
       run: |
         WMIC PROCESS where "Name like 'java%' AND CommandLine like '%GradleDaemon%'" Call Terminate
     - name: Cleanup the Gradle cache
@@ -144,6 +146,7 @@ runs:
         rm -rf ~/.gradle/jdks/*/
     - name: Force the Gradle cleanup on Windows
       if: ${{ runner.os == 'Windows' }}
+      shell: powershell
       run: |
         Remove-Item -Force c:\Users\runneradmin\.gradle\caches\modules-2\modules-2.lock
         Remove-Item -Force c:\Users\runneradmin\.gradle\caches\modules-2\gc.properties
