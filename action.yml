@@ -1,71 +1,69 @@
 name: Build and delivery a Gradle project
-on:
-  workflow_call:
-    inputs:
-      build-command:
-        description: 'The command executed in the build phase'
-        default: './gradlew assemble --parallel'
-        required: false
-      check-command:
-        description: 'The command executed in the check phase'
-        default: './gradlew check --parallel'
-        required: false
-      deploy-command:
-        description: 'The condition triggering a deploy run'
-        default: "./gradlew publishKotlinMavenPublicationToMavenCentralRepository"
-        required: false
-      java-distribution:
-        description: 'The Java distrbutor to use'
-        default: "temurin"
-        required: false
-      java-version:
-        description: 'The Java version to use'
-        default: "17"
-        required: false
-      should-run-codecov:
-        description: 'True if the action should send coverage results to codecov.io'
-        default: true
-        required: false
-      should-deploy:
-        description: 'True if the deploy operation should be executed'
-        default: false
-        required: false
-      maven-central-username:
-        description: 'Username for Maven Central'
-        default: 'danysk'
-        required: false
-      custom-secret-0:
-        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_0'
-        default: ''
-        required: false
-      custom-secret-1:
-        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_1'
-        default: ''
-        required: false
-      custom-secret-2:
-        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_2'
-        default: ''
-        required: false
-      custom-secret-3:
-        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_3'
-        default: ''
-        required: false
-      custom-secret-4:
-        description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_4'
-        default: ''
-        required: false
-      github-token:
-        required: false
-      gradle-publish-secret:
-        required: false
-      gradle-publish-key:
-        required: false
-      maven-central-password:
-        required: false
-      signing-key:
-        required: false
-      signing-password:
-        required: false
+inputs:
+  build-command:
+    description: 'The command executed in the build phase'
+    default: './gradlew assemble --parallel'
+    required: false
+  check-command:
+    description: 'The command executed in the check phase'
+    default: './gradlew check --parallel'
+    required: false
+  deploy-command:
+    description: 'The condition triggering a deploy run'
+    default: "./gradlew publishKotlinMavenPublicationToMavenCentralRepository"
+    required: false
+  java-distribution:
+    description: 'The Java distrbutor to use'
+    default: "temurin"
+    required: false
+  java-version:
+    description: 'The Java version to use'
+    default: "17"
+    required: false
+  should-run-codecov:
+    description: 'True if the action should send coverage results to codecov.io'
+    default: true
+    required: false
+  should-deploy:
+    description: 'True if the deploy operation should be executed'
+    default: false
+    required: false
+  maven-central-username:
+    description: 'Username for Maven Central'
+    default: 'danysk'
+    required: false
+  custom-secret-0:
+    description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_0'
+    default: ''
+    required: false
+  custom-secret-1:
+    description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_1'
+    default: ''
+    required: false
+  custom-secret-2:
+    description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_2'
+    default: ''
+    required: false
+  custom-secret-3:
+    description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_3'
+    default: ''
+    required: false
+  custom-secret-4:
+    description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_4'
+    default: ''
+    required: false
+  github-token:
+    required: false
+  gradle-publish-secret:
+    required: false
+  gradle-publish-key:
+    required: false
+  maven-central-password:
+    required: false
+  signing-key:
+    required: false
+  signing-password:
+    required: false
 
 runs:
   using: composite
