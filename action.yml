@@ -10,7 +10,7 @@ inputs:
     description: 'The command executed in the check phase'
     default: './gradlew check --parallel'
     required: false
-  check-command:
+  clean-command:
     description: 'The command executed in the final clean phase'
     default: 'true'
     required: false
