@@ -1,5 +1,8 @@
 name: Build and delivery a Gradle project
 description: Build and delivery a Gradle project
+branding:
+  icon: 'box'  
+  color: 'green'
 
 inputs:
   build-command:
