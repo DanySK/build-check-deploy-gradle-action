@@ -18,6 +18,10 @@ inputs:
     description: 'The condition triggering a deploy run'
     default: "./gradlew publish --parallel"
     required: false
+  gradle-termination-command:
+    description: 'The command to terminate the gradle wrapper gracefully'
+    default: "./gradlew --stop"
+    required: false
   java-distribution:
     description: 'The Java distrbutor to use'
     default: "temurin"
@@ -70,6 +74,10 @@ inputs:
     required: false
   signing-password:
     required: false
+  working-directory:
+    description: 'Location where the repository should will be cloned'
+    default: '.'
+    required: false
 
 runs:
   using: composite
@@ -83,8 +91,6 @@ runs:
         server-password: $ {{ inputs.maven-central-password }}
         gpg-private-key: ${{ inputs.signing-key }}
         gpg-passphrase: ${{ inputs.signing-password }}
-    - name: Checkout
-      uses: danysk/action-checkout@0.1.0
     - name: Configure the Windows Pagefile
       if: ${{ runner.os == 'Windows' }}
       uses: al-cheb/configure-pagefile-action@v1.2
@@ -100,10 +106,12 @@ runs:
           ${{ runner.os }}-gradle-
     - name: Build
       shell: bash
+      working-directory: ${{ inputs.working-directory }}
       run: |
         ${{ inputs.build-command }}
     - name: Check
       shell: bash
+      working-directory: ${{ inputs.working-directory }}
       run: |
         ${{ inputs.check-command }}
     - name: CodeCov
@@ -111,6 +119,7 @@ runs:
       uses: codecov/codecov-action@v2
     - name: Deploy
       if: inputs.should-deploy == 'true'
+      working-directory: ${{ inputs.working-directory }}
       shell: bash
       env:
         CUSTOM_SECRET_0: ${{ inputs.custom-secret-0 }}
@@ -129,11 +138,13 @@ runs:
       run: |
         ${{ inputs.deploy-command }}
     - name: Cleanup
+      working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
         ${{ inputs.clean-command }}
     - name: Turn off the Gradle Daemon
       shell: bash
+      working-directory: ${{ inputs.working-directory }}
       run: ./gradlew --stop
     - name: Force-kill the remaining Gradle Daemons on Windows
       if: ${{ runner.os == 'Windows' }}
