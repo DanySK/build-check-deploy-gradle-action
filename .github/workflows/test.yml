@@ -38,6 +38,7 @@ jobs:
           working-directory: target
           should-run-codecov: false
   release:
+    if: github.event_name == 'push'
     needs:
       - test
     runs-on: ubuntu-latest
