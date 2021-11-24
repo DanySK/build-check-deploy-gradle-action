@@ -152,6 +152,10 @@ runs:
       if: ${{ runner.os == 'Windows' }}
       shell: powershell
       run: |
-        Remove-Item -Force c:\Users\runneradmin\.gradle\caches\modules-2\modules-2.lock
-        Remove-Item -Force c:\Users\runneradmin\.gradle\caches\modules-2\gc.properties
+        $files = "c:\Users\runneradmin\.gradle\caches\modules-2\modules-2.lock","c:\Users\runneradmin\.gradle\caches\modules-2\gc.properties"
+        foreach ($file in $files) {
+          if (Test-Path $file = True) {
+            Remove-Item -Force $file
+          }
+        }
         Remove-Item -Force c:\Users\runneradmin\.gradle\jdks\*.lock
