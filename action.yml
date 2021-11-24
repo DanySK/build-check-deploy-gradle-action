@@ -16,7 +16,7 @@ inputs:
     required: false
   deploy-command:
     description: 'The condition triggering a deploy run'
-    default: "./gradlew publishKotlinMavenPublicationToMavenCentralRepository"
+    default: "./gradlew publish --parallel"
     required: false
   java-distribution:
     description: 'The Java distrbutor to use'
