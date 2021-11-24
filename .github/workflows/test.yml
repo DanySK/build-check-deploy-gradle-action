@@ -1,0 +1,24 @@
+name: Test
+
+on:
+  push:
+    branches-ignore:
+      - 'renovate/**'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: 'action'
+      - name: Checkout test repo
+        run: |
+          git clone https://github.com/DanySK/Template-for-Gradle-Plugins.git target
+      - uses: ./action
+        with:
+          working-directory: target
+          should-run-codecov: false
