@@ -171,7 +171,7 @@ runs:
       run: |
         $files = "c:\Users\runneradmin\.gradle\caches\modules-2\modules-2.lock","c:\Users\runneradmin\.gradle\caches\modules-2\gc.properties"
         foreach ($file in $files) {
-          if (Test-Path $file = True) {
+          if (Test-Path -Path $file -PathType Leaf) {
             Remove-Item -Force $file
           }
         }
