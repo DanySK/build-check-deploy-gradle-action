@@ -116,7 +116,7 @@ runs:
         ${{ inputs.check-command }}
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v2.1.0
     - name: Deploy
       if: inputs.should-deploy == 'true'
       working-directory: ${{ inputs.working-directory }}
