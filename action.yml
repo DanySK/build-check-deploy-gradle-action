@@ -39,8 +39,12 @@ inputs:
     default: false
     required: false
   maven-central-username:
-    description: 'Username for Maven Central'
+    description: 'Username for Maven Central that will be exposed in the deployment step as the environment variable MAVEN_CENTRAL_PASSWORD'
     default: 'danysk'
+    required: false
+  working-directory:
+    description: 'Location where the repository should will be cloned'
+    default: '.'
     required: false
   custom-secret-0:
     description: 'A custom secret that will be exposed in the deployment step as the environment variable CUSTOM_SECRET_0'
@@ -63,20 +67,22 @@ inputs:
     default: ''
     required: false
   github-token:
+    description: 'The GitHub token, it will be exposed in the deployment step as the environment variable GITHUB_TOKEN'
     required: false
   gradle-publish-secret:
+    description: 'The Gradle Plugin Portal publish secret, it will be exposed in the deployment step as the environment variable GRADLE_PUBLISH_SECRET'
     required: false
   gradle-publish-key:
+    description: 'The Gradle Plugin Portal publish key, it will be exposed in the deployment step as the environment variable GRADLE_PUBLISH_KEY'
     required: false
   maven-central-password:
+    description: 'Password for OSSRH / Maven Central, it will be exposed in the deployment step as the environment variable MAVEN_CENTRAL_PASSWORD'
     required: false
   signing-key:
+    description: 'ASCII-armored signing key, it will be exposed in the deployment step as the environment variable ORG_GRADLE_PROJECT_signingKey'
     required: false
   signing-password:
-    required: false
-  working-directory:
-    description: 'Location where the repository should will be cloned'
-    default: '.'
+    description: 'Password for the signing key, it will be exposed in the deployment step as the environment variable ORG_GRADLE_PROJECT_signingPassword and SIGNING_PASSWORD'
     required: false
 
 runs:
