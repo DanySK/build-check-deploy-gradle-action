@@ -95,7 +95,7 @@ runs:
       if: ${{ runner.os == 'Windows' }}
       uses: al-cheb/configure-pagefile-action@v1.2
     - name: Cache Gradle packages
-      uses: actions/cache@v2
+      uses: actions/cache@v2.1.7
       with:
         path: |
           ~/.gradle/caches
