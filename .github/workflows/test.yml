@@ -39,6 +39,13 @@ jobs:
           ref: ${{ steps.trick.outputs.version }}
       - uses: ./action
         with:
+          build-command: ./gradlew tasks
+          check-command: true
+          working-directory: target
+          should-run-codecov: false
+          clean-command: ./gradlew clean
+      - uses: ./action
+        with:
           working-directory: target
           should-run-codecov: false
   release:
