@@ -107,10 +107,10 @@ runs:
       run: |
         ${{ inputs.check-command }}
     - name: CodeCov
-      if: inputs.should-run-codecov
+      if: inputs.should-run-codecov == 'true'
       uses: codecov/codecov-action@v2
     - name: Deploy
-      if: inputs.should-deploy
+      if: inputs.should-deploy == 'true'
       shell: bash
       env:
         CUSTOM_SECRET_0: ${{ inputs.custom-secret-0 }}
