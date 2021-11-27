@@ -1,13 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json", 
   "extends": [
-    "local>DanySK/renovate-config"
-  ],
-  "packageRules": [
-    {
-      "description": "Trigger a patch update if action.yml gets updated",
-      "matchPaths": ["+(action.yml)"],
-      "semanticCommitType": "fix"
-    }
+    "local>DanySK/renovate-config:composite-action"
   ]
 }
