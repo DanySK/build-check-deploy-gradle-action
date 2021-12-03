@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.1.0...1.1.1) (2021-12-03)
+
+
+### Bug Fixes
+
+* **deps:** update actions/setup-java action to v2.4.0 ([133c036](https://github.com/DanySK/build-check-deploy-gradle-action/commit/133c036efff10129eb9cc1b059907213cda00978))
+
 # [1.1.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.0.4...1.1.0) (2021-12-03)
 
 
