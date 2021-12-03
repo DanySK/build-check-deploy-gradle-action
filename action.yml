@@ -41,6 +41,10 @@ inputs:
     description: 'True if the deploy operation should be executed'
     default: false
     required: false
+  should-validate-wrapper:
+    description: 'True if the wrapper should get validated before proceeding'
+    default: true
+    required: false
   maven-central-username:
     description: 'Username for Maven Central that will be exposed in the deployment step as the environment variable MAVEN_CENTRAL_PASSWORD'
     default: 'danysk'
@@ -91,7 +95,11 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/setup-java@v2.3.1
+    - name: Validate the Gradle Wraper
+      if: inputs.should-validate-wrapper == 'true'
+      uses: gradle/wrapper-validation-action@v1.0.4
+    - name: Setup JAva
+      uses: actions/setup-java@v2.3.1
       with:
         distribution: ${{ inputs.java-distribution }}
         java-version: ${{ inputs.java-version }}
