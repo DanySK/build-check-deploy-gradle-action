@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.0.4...1.1.0) (2021-12-03)
+
+
+### Features
+
+* add a gradle wrapper validation step ([f7e2542](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f7e254239ea0188d3b92fa60bbf991b3e516cb07))
+
 ## [1.0.4](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.0.3...1.0.4) (2021-11-24)
 
 
