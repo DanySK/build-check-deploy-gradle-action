@@ -98,7 +98,7 @@ runs:
     - name: Validate the Gradle Wraper
       if: inputs.should-validate-wrapper == 'true'
       uses: gradle/wrapper-validation-action@v1.0.4
-    - name: Setup JAva
+    - name: Setup Java
       uses: actions/setup-java@v2.5.0
       with:
         distribution: ${{ inputs.java-distribution }}
