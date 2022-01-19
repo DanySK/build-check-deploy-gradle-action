@@ -1,3 +1,24 @@
+## [1.2.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.1.3...1.2.0) (2022-01-19)
+
+
+### Features
+
+* **codecov:** allow control of coverage file search location, default to 'build' ([d522673](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d522673edb306051e40e1c389bf24cdcc23056dc))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.4 ([b32a210](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b32a21087c8d51ff0e76ae8614ecbeea9bc954da))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins commit hash to c3f6fc6 ([fa9f681](https://github.com/DanySK/build-check-deploy-gradle-action/commit/fa9f6819924c850c8d61225e8a19c25bc4f53ed7))
+* **deps:** update danysk/template-for-gradle-plugins commit hash to c609d57 ([6a4d66b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6a4d66ba52b0263ddd7fb7e57fe13dceb17617f2))
+* **deps:** update danysk/template-for-gradle-plugins commit hash to df9e9df ([de51159](https://github.com/DanySK/build-check-deploy-gradle-action/commit/de5115989c4b59bc293eb27de1acb5ece86b2e67))
+* **deps:** update danysk/template-for-gradle-plugins commit hash to f211533 ([65e5d0c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/65e5d0cea031efbf4875bab40f4fe57e1c3fae68))
+* **deps:** update danysk/template-for-gradle-plugins commit hash to f28b2f0 ([9ee05eb](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9ee05eb3c91cef99adc6d44ac295cc97ea9fdf38))
+
 ### [1.1.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.1.2...1.1.3) (2022-01-12)
 
 
