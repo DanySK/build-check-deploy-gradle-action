@@ -17,6 +17,10 @@ inputs:
     description: 'The command executed in the final clean phase'
     default: 'true'
     required: false
+  codecov-directory:
+    description: 'The location where CodeCov searches for coverage information'
+    default: build
+    required: false
   deploy-command:
     description: 'The condition triggering a deploy run'
     default: "./gradlew publish --parallel"
@@ -134,6 +138,8 @@ runs:
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
       uses: codecov/codecov-action@v2.1.0
+      with:
+        directory: ${{ inputs.codecov-directory }}
     - name: Deploy
       if: inputs.should-deploy == 'true'
       working-directory: ${{ inputs.working-directory }}
