@@ -108,10 +108,10 @@ runs:
         distribution: ${{ inputs.java-distribution }}
         java-version: ${{ inputs.java-version }}
         server-id: ossrh
-        server-username: ${{ inputs.maven-central-username }}
-        server-password: $ {{ inputs.maven-central-password }}
+        server-username: MAVEN_CENTRAL_USERNAME
+        server-password: MAVEN_CENTRAL_PASSWORD
         gpg-private-key: ${{ inputs.signing-key }}
-        gpg-passphrase: ${{ inputs.signing-password }}
+        gpg-passphrase: SIGNING_PASSWORD
     - name: Configure the Windows Pagefile
       if: ${{ runner.os == 'Windows' }}
       uses: al-cheb/configure-pagefile-action@v1.2
