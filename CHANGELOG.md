@@ -1,3 +1,10 @@
+### [1.2.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.2...1.2.3) (2022-02-26)
+
+
+### Bug Fixes
+
+* only remove c:\Users\runneradmin\.gradle\jdks\*.lock files if they exist ([a7ee32a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a7ee32aab1860b5ba0e60bae29310e58317cab57))
+
 ### [1.2.2](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.1...1.2.2) (2022-02-26)
 
 
