@@ -1,3 +1,15 @@
+### [1.2.2](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.1...1.2.2) (2022-02-26)
+
+
+### Bug Fixes
+
+* gpg-passphrase and server-password should be variable names ([8b6b03b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8b6b03b7f402bf4435e6ae32c0d387de0255e63f))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins commit hash to 9c00c99 ([a0ac1a9](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a0ac1a957338c36185a38b738b6356d2a50eaecc))
+
 ### [1.2.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.0...1.2.1) (2022-02-24)
 
 
