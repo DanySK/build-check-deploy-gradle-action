@@ -192,4 +192,5 @@ runs:
             Remove-Item -Force $file
           }
         }
-        Remove-Item -Force c:\Users\runneradmin\.gradle\jdks\*.lock
+        Get-ChildItem -Name "c:\Users\runneradmin\.gradle\jdks\" -Filter *.lock | 
+        Foreach-Object { Remove-Item -Force $_ }
