@@ -1,3 +1,10 @@
+### [1.2.4](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.3...1.2.4) (2022-02-26)
+
+
+### Bug Fixes
+
+* check for the existence of "c:\Users\runneradmin\.gradle\jdks\" ([ddb492d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ddb492d682d9430ca688c25bef29e480cd3b3e46))
+
 ### [1.2.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.2...1.2.3) (2022-02-26)
 
 
