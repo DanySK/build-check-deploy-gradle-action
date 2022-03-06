@@ -194,5 +194,5 @@ runs:
         }
         $jdkFolder = "c:\Users\runneradmin\.gradle\jdks\"
         if (Test-Path -Path $jdkFolder) {
-          Get-ChildItem -Name $jdkFolder -Filter *.lock | Foreach-Object { Remove-Item -Force $_ }
+          Get-ChildItem -Name $jdkFolder -Filter *.lock | Foreach-Object { Remove-Item -Force $_.FullName }
         }
