@@ -1,3 +1,10 @@
+### [1.2.6](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.5...1.2.6) (2022-03-06)
+
+
+### Bug Fixes
+
+* **windows:** try to avoid ParameterBindingValidationException on cleanup ([7930a18](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7930a184a87a490f22901e8fd1c224460c33b18f))
+
 ### [1.2.5](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.4...1.2.5) (2022-03-06)
 
 
