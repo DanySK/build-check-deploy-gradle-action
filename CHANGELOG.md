@@ -1,3 +1,19 @@
+### [1.2.5](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.4...1.2.5) (2022-03-06)
+
+
+### Bug Fixes
+
+* **windows:** remove files on windows using the full path ([2602b8a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/2602b8a404b727858d0db1ee3eb43bfb15d87f6f))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3 ([798d232](https://github.com/DanySK/build-check-deploy-gradle-action/commit/798d232b86183102c401b38043b2e16bfe3c0cad))
+* **deps:** update danysk/template-for-gradle-plugins commit hash to 2aa71a3 ([39e0629](https://github.com/DanySK/build-check-deploy-gradle-action/commit/39e06292dd59f7e4b62f509c1c226a2e3fe48849))
+* **deps:** update danysk/template-for-gradle-plugins commit hash to 9d09d40 ([db3d4b8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/db3d4b8aa65da7614254f0379de55649dcec77eb))
+* **deps:** update danysk/template-for-gradle-plugins commit hash to a073ce3 ([8b97875](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8b97875fabeee8e7a10348e27ba57a70c4623c27))
+* **deps:** update danysk/template-for-gradle-plugins commit hash to c6ebd47 ([c796e58](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c796e5854c6cd6f660b831c95154156ec800ccc1))
+
 ### [1.2.4](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.3...1.2.4) (2022-02-26)
 
 
