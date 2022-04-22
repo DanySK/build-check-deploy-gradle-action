@@ -1,3 +1,23 @@
+### [1.2.13](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.12...1.2.13) (2022-04-22)
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.0.1 ([8064f87](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8064f87a546215baafd8f9e6e64aa61779a022ab))
+* **deps:** update actions/checkout action to v3.0.2 ([746d22d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/746d22ddf941f66cbc43d99cd19d68b1dcd2f8a7))
+* **deps:** update danysk/template-for-gradle-plugins digest to 18077ba ([2eadd0e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/2eadd0e8af7d4b854a1997a7f41ec35eed33507a))
+* **deps:** update danysk/template-for-gradle-plugins digest to 2a944ad ([d21fff4](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d21fff4c34c263fe98763c3885fd6c3955fd0a2c))
+* **deps:** update danysk/template-for-gradle-plugins digest to 3308279 ([c726d88](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c726d884bc488e86ea5bbb76617d6c34797e11f1))
+* **deps:** update danysk/template-for-gradle-plugins digest to 46553eb ([13c1c6c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/13c1c6cb09d7f6e71fc1b459dde135f445f70add))
+* **deps:** update danysk/template-for-gradle-plugins digest to 6b5bc50 ([277582a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/277582ad977a1bff536900077f344f7c0f6b0e58))
+* **deps:** update danysk/template-for-gradle-plugins digest to 9900d15 ([962e94b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/962e94b4f4b958a01a153b1212fd25e7e60a2ba2))
+* **deps:** update danysk/template-for-gradle-plugins digest to d9f683b ([d740bbe](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d740bbe7dfd6d5014eccda4a8587e1930a6110e0))
+
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v3.1.0 ([25896b1](https://github.com/DanySK/build-check-deploy-gradle-action/commit/25896b1aa3451e9987acd393ab63857aaf73f375))
+
 ### [1.2.12](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.11...1.2.12) (2022-04-11)
 
 
