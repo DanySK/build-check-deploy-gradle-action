@@ -5,6 +5,10 @@ branding:
   color: 'green'
 
 inputs:
+  pre-build-command:
+    description: 'A command to be executed before the build phase (but after configuring the JVM)'
+    default: 'true'
+    required: false
   build-command:
     description: 'The command executed in the build phase'
     default: './gradlew assemble --parallel'
@@ -39,8 +43,7 @@ inputs:
     required: false
   should-run-codecov:
     description: 'True if the action should send coverage results to codecov.io'
-    default: true
-    required: false
+    required: true
   should-deploy:
     description: 'True if the deploy operation should be executed'
     default: false
@@ -126,6 +129,11 @@ runs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
+    - name: Pre-build
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      run: |
+        ${{ inputs.pre-build-command }}
     - name: Build
       shell: bash
       working-directory: ${{ inputs.working-directory }}
