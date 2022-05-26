@@ -31,11 +31,11 @@ jobs:
       - uses: DanySK/build-check-deploy-gradle-action@1.0.0
         with:
           pre-build-command: 'true'
-          build-command: ./gradlew assemble --parallel
-          check-command: ./gradlew check --parallel
+          build-command: gradle assemble --parallel
+          check-command: gradle check --parallel
           clean-command: 'true'
-          deploy-command: ./gradlew publish --parallel
-          gradle-termination-command: ./gradlew --stop
+          deploy-command: gradle publish --parallel
+          gradle-termination-command: gradle --stop
           java-distribution: temurin
           java-version: '17'
           should-run-codecov: false
