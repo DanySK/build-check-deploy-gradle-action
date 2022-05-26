@@ -107,6 +107,7 @@ runs:
       with:
         distribution: ${{ inputs.java-distribution }}
         java-version: ${{ inputs.java-version }}
+        # Apache Maven Configuration
         server-id: ossrh
         server-username: MAVEN_CENTRAL_USERNAME
         server-password: MAVEN_CENTRAL_PASSWORD
