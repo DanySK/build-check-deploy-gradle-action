@@ -133,17 +133,23 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
+        echo "::group::Pre-build"
         ${{ inputs.pre-build-command }}
+        echo "::endgroup::"
     - name: Build
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
+        echo "::group::Build"
         ${{ inputs.build-command }}
+        echo "::endgroup::"
     - name: Check
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
+        echo "::group::Check"
         ${{ inputs.check-command }}
+        echo "::endgroup::"
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
       uses: codecov/codecov-action@v3.1.0
@@ -168,12 +174,16 @@ runs:
         ORG_GRADLE_PROJECT_signingPassword: ${{ inputs.signing-password }}
         SIGNING_PASSWORD: ${{ inputs.signing-password }}
       run: |
+        echo "::group::Deploy"
         ${{ inputs.deploy-command }}
+        echo "::endgroup::"
     - name: Cleanup
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
+        echo "::group::Cleanup"
         ${{ inputs.clean-command }}
+        echo "::endgroup::"
     - name: Turn off the Gradle Daemon
       shell: bash
       working-directory: ${{ inputs.working-directory }}
