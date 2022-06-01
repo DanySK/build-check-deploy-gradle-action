@@ -113,7 +113,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Validate the Gradle Wraper
+    - name: Validate the Gradle Wrapper
       if: inputs.should-validate-wrapper == 'true'
       uses: gradle/wrapper-validation-action@v1.0.4
     - name: Setup Java
@@ -182,6 +182,8 @@ runs:
         MAVEN_CENTRAL_PASSWORD: ${{ inputs.maven-central-password }}
         MAVEN_CENTRAL_USERNAME: ${{ inputs.maven-central-username }}
         SIGNING_PASSWORD: ${{ inputs.signing-password }}
+        NPM_REPO: ${{ inputs.npm-repo }}
+        NPM_TOKEN: ${{ inputs.npm-token }}
         #
         ORG_GRADLE_PROJECT_mavenRepo: ${{ inputs.maven-central-repo }}
         ORG_GRADLE_PROJECT_mavenUsername: ${{ inputs.maven-central-password }}
