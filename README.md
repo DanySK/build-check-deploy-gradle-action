@@ -41,6 +41,8 @@ jobs:
           should-run-codecov: false
           should-deploy: false
           maven-central-username: 'danysk'
+          maven-central-password:
+          maven-central-repo: 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
           working-directory: '.'
           custom-secret-0: ''
           custom-secret-1: ''
@@ -50,7 +52,8 @@ jobs:
           github-token: ${{ github.token }}
           gradle-publish-secret:
           gradle-publish-key:
-          maven-central-password:
           signing-key:
           signing-password:
+          npm-repo: 'https://registry.npmjs.org'
+          npm-token:
 ```
