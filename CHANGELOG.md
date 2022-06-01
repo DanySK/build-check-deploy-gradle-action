@@ -1,3 +1,19 @@
+## [2.0.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.16...2.0.0) (2022-06-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* add pre-build, improve logging via grouping, add variables for NPM, and additional aliases for the Maven environment variables (#124)
+
+### Features
+
+* add pre-build, improve logging via grouping, add variables for NPM, and additional aliases for the Maven environment variables ([#124](https://github.com/DanySK/build-check-deploy-gradle-action/issues/124)) ([80138ab](https://github.com/DanySK/build-check-deploy-gradle-action/commit/80138abe94cbd5b290693f4af05e79a36da3ce14))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to c3a7018 ([f715da9](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f715da92b6d44c27d8fba56b52969037280b8cab))
+
 ## [1.2.16](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.15...1.2.16) (2022-05-31)
 
 
