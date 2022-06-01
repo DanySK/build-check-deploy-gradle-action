@@ -5,6 +5,10 @@ branding:
   color: 'green'
 
 inputs:
+  pre-build-command:
+    description: 'A command to be executed before the build phase (but after configuring the JVM)'
+    default: 'true'
+    required: false
   build-command:
     description: 'The command executed in the build phase'
     default: './gradlew assemble --parallel'
@@ -39,7 +43,6 @@ inputs:
     required: false
   should-run-codecov:
     description: 'True if the action should send coverage results to codecov.io'
-    default: true
     required: false
   should-deploy:
     description: 'True if the deploy operation should be executed'
@@ -50,7 +53,7 @@ inputs:
     default: true
     required: false
   maven-central-username:
-    description: 'Username for Maven Central that will be exposed in the deployment step as the environment variable MAVEN_CENTRAL_PASSWORD'
+    description: 'Username for Maven Central that will be exposed in the deployment step as the environment variables MAVEN_CENTRAL_PASSWORD and ORG_GRADLE_PROJECT_mavenUsername'
     default: 'danysk'
     required: false
   working-directory:
@@ -87,19 +90,30 @@ inputs:
     description: 'The Gradle Plugin Portal publish key, it will be exposed in the deployment step as the environment variable GRADLE_PUBLISH_KEY'
     required: false
   maven-central-password:
-    description: 'Password for OSSRH / Maven Central, it will be exposed in the deployment step as the environment variable MAVEN_CENTRAL_PASSWORD'
+    description: 'Password for OSSRH / Maven Central, it will be exposed in the deployment step as the environment variables MAVEN_CENTRAL_PASSWORD and ORG_GRADLE_PROJECT_mavenPassword'
     required: false
+  maven-central-repo:
+    description: 'URL for OSSRH / Maven Central Repository, it will be exposed in the deployment step as the environment variables MAVEN_CENTRAL_REPO and ORG_GRADLE_PROJECT_mavenRepo'
+    required: false
+    default: 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
   signing-key:
     description: 'ASCII-armored signing key, it will be exposed in the deployment step as the environment variable ORG_GRADLE_PROJECT_signingKey'
     required: false
   signing-password:
-    description: 'Password for the signing key, it will be exposed in the deployment step as the environment variable ORG_GRADLE_PROJECT_signingPassword and SIGNING_PASSWORD'
+    description: 'Password for the signing key, it will be exposed in the deployment step as the environment variables ORG_GRADLE_PROJECT_signingPassword and SIGNING_PASSWORD'
+    required: false
+  npm-repo:
+    description: 'URL for the NPM registry of choice, it will be exposed in the deployment step as the environment variable ORG_GRADLE_PROJECT_npmRepo'
+    required: false
+    default: 'https://registry.npmjs.org'
+  npm-token:
+    description: 'Authorization token for the NPM registry of choice, it will be exposed in the deployment step as the environment variable ORG_GRADLE_PROJECT_npmToken'
     required: false
 
 runs:
   using: composite
   steps:
-    - name: Validate the Gradle Wraper
+    - name: Validate the Gradle Wrapper
       if: inputs.should-validate-wrapper == 'true'
       uses: gradle/wrapper-validation-action@v1.0.4
     - name: Setup Java
@@ -126,16 +140,27 @@ runs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
+    - name: Pre-build
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      run: |
+        echo "::group::Pre-build"
+        ${{ inputs.pre-build-command }}
+        echo "::endgroup::"
     - name: Build
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
+        echo "::group::Build"
         ${{ inputs.build-command }}
+        echo "::endgroup::"
     - name: Check
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
+        echo "::group::Check"
         ${{ inputs.check-command }}
+        echo "::endgroup::"
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
       uses: codecov/codecov-action@v3.1.0
@@ -156,16 +181,29 @@ runs:
         GRADLE_PUBLISH_KEY: ${{ inputs.gradle-publish-key }}
         MAVEN_CENTRAL_PASSWORD: ${{ inputs.maven-central-password }}
         MAVEN_CENTRAL_USERNAME: ${{ inputs.maven-central-username }}
+        SIGNING_PASSWORD: ${{ inputs.signing-password }}
+        NPM_REPO: ${{ inputs.npm-repo }}
+        NPM_TOKEN: ${{ inputs.npm-token }}
+        # Gradle-specific exports, see: 
+        # https://docs.gradle.org/current/userguide/build_environment.html#sec:project_properties
+        ORG_GRADLE_PROJECT_mavenRepo: ${{ inputs.maven-central-repo }}
+        ORG_GRADLE_PROJECT_mavenUsername: ${{ inputs.maven-central-password }}
+        ORG_GRADLE_PROJECT_mavenPassword: ${{ inputs.maven-central-username }}  
         ORG_GRADLE_PROJECT_signingKey: ${{ inputs.signing-key }}
         ORG_GRADLE_PROJECT_signingPassword: ${{ inputs.signing-password }}
-        SIGNING_PASSWORD: ${{ inputs.signing-password }}
+        ORG_GRADLE_PROJECT_npmRepo: ${{ inputs.npm-repo }}
+        ORG_GRADLE_PROJECT_npmToken: ${{ inputs.npm-token }}
       run: |
+        echo "::group::Deploy"
         ${{ inputs.deploy-command }}
+        echo "::endgroup::"
     - name: Cleanup
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
+        echo "::group::Cleanup"
         ${{ inputs.clean-command }}
+        echo "::endgroup::"
     - name: Turn off the Gradle Daemon
       shell: bash
       working-directory: ${{ inputs.working-directory }}

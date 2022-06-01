@@ -5,16 +5,17 @@ A highly configurable composite action taking care of running a complete CI pipe
 The workflow is the following:
 
 1. Setup java at the version specified by the input parameter `java-version` from the distributor `java-distribution`, configuring also the information for Maven by populating the server username using input `maven-central-username`, the server password using `maven-central-password`, the gpg private key using `signing-key`, and the gpg passphrase using `signing-password`.
-2. If the runner is Windows, configure the page file
-3. Enable caching for gradle
-4. Run `build-command` inside `working-directory`
-5. Run `check-command` inside `working-directory`
-6. If `should-run-codecov` is set to `true`, then upload coverage informatio to codecov.io
-7. if `should-deploy` is set to `true`, run `deploy-command` inside `working-directory`
-8. Run `clean-command` inside `working-directory`
-9. Turn off the gradle daemon gracefully by running `gradle-termination-command` inside `working-directory`
-10. Force kill remaining daemons
-11. Cleanup the Gradle cache
+0. If the runner is Windows, configure the page file
+0. Enable caching for gradle
+0. Run `pre-build-command` inside `working-directory`
+0. Run `build-command` inside `working-directory`
+0. Run `check-command` inside `working-directory`
+0. If `should-run-codecov` is set to `true`, then upload coverage informatio to codecov.io
+0. if `should-deploy` is set to `true`, run `deploy-command` inside `working-directory`
+0. Run `clean-command` inside `working-directory`
+0. Turn off the gradle daemon gracefully by running `gradle-termination-command` inside `working-directory`
+0. Force kill remaining daemons
+0. Cleanup the Gradle cache
 
 ## Example
 
@@ -29,6 +30,7 @@ jobs:
         uses: actions/checkout@v2.4.0
       - uses: DanySK/build-check-deploy-gradle-action@1.0.0
         with:
+          pre-build-command: 'true'
           build-command: ./gradlew assemble --parallel
           check-command: ./gradlew check --parallel
           clean-command: 'true'
@@ -36,9 +38,11 @@ jobs:
           gradle-termination-command: ./gradlew --stop
           java-distribution: temurin
           java-version: '17'
-          should-run-codecov: 'true'
-          should-deploy: 'false'
+          should-run-codecov: true
+          should-deploy: false
           maven-central-username: 'danysk'
+          maven-central-password:
+          maven-central-repo: 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
           working-directory: '.'
           custom-secret-0: ''
           custom-secret-1: ''
@@ -48,7 +52,8 @@ jobs:
           github-token: ${{ github.token }}
           gradle-publish-secret:
           gradle-publish-key:
-          maven-central-password:
           signing-key:
           signing-password:
+          npm-repo: 'https://registry.npmjs.org'
+          npm-token:
 ```
