@@ -38,7 +38,7 @@ jobs:
           gradle-termination-command: ./gradlew --stop
           java-distribution: temurin
           java-version: '17'
-          should-run-codecov: false
+          should-run-codecov: true
           should-deploy: false
           maven-central-username: 'danysk'
           maven-central-password:
