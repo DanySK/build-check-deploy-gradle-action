@@ -184,7 +184,8 @@ runs:
         SIGNING_PASSWORD: ${{ inputs.signing-password }}
         NPM_REPO: ${{ inputs.npm-repo }}
         NPM_TOKEN: ${{ inputs.npm-token }}
-        #
+        # Gradle-specific exports, see: 
+        # https://docs.gradle.org/current/userguide/build_environment.html#sec:project_properties
         ORG_GRADLE_PROJECT_mavenRepo: ${{ inputs.maven-central-repo }}
         ORG_GRADLE_PROJECT_mavenUsername: ${{ inputs.maven-central-password }}
         ORG_GRADLE_PROJECT_mavenPassword: ${{ inputs.maven-central-username }}  
