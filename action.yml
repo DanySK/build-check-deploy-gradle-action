@@ -187,8 +187,8 @@ runs:
         # Gradle-specific exports, see: 
         # https://docs.gradle.org/current/userguide/build_environment.html#sec:project_properties
         ORG_GRADLE_PROJECT_mavenRepo: ${{ inputs.maven-central-repo }}
-        ORG_GRADLE_PROJECT_mavenUsername: ${{ inputs.maven-central-password }}
-        ORG_GRADLE_PROJECT_mavenPassword: ${{ inputs.maven-central-username }}  
+        ORG_GRADLE_PROJECT_mavenUsername: ${{ inputs.maven-central-username }}
+        ORG_GRADLE_PROJECT_mavenPassword: ${{ inputs.maven-central-password }}  
         ORG_GRADLE_PROJECT_signingKey: ${{ inputs.signing-key }}
         ORG_GRADLE_PROJECT_signingPassword: ${{ inputs.signing-password }}
         ORG_GRADLE_PROJECT_npmRepo: ${{ inputs.npm-repo }}
