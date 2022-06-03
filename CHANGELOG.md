@@ -1,3 +1,16 @@
+## [2.0.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.0.0...2.0.1) (2022-06-03)
+
+
+### Bug Fixes
+
+* assignment of maven-centra-{username, password} to gradle properties in deploy ([#133](https://github.com/DanySK/build-check-deploy-gradle-action/issues/133)) ([2734a78](https://github.com/DanySK/build-check-deploy-gradle-action/commit/2734a781782feec7641373581c5156a6b2c59223))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 9cef8d9 ([55dcbb0](https://github.com/DanySK/build-check-deploy-gradle-action/commit/55dcbb08a1fb12b57ac42123ea928b055c330720))
+* **deps:** update danysk/template-for-gradle-plugins digest to f7aa286 ([ca7d11f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ca7d11fd2cecd3e2e0ba8a1212a02406c6f27fe1))
+
 ## [2.0.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/1.2.16...2.0.0) (2022-06-01)
 
 
