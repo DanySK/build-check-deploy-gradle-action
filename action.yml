@@ -43,6 +43,7 @@ inputs:
     required: false
   should-run-codecov:
     description: 'True if the action should send coverage results to codecov.io'
+    default: true
     required: false
   should-deploy:
     description: 'True if the deploy operation should be executed'
