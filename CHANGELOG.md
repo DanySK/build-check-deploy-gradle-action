@@ -1,3 +1,16 @@
+## [2.1.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.0.3...2.1.0) (2022-07-01)
+
+
+### Features
+
+* run default assemble and check commands twice by default, as many failures seem to be network-related and in need of a simple retry ([8572732](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8572732b9f60dbfe7c2d6c587f1f4a5d2020a8e7))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 42a8e68 ([5d594b6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/5d594b6154bc073643c89071a1790a42c60341b8))
+* **deps:** update danysk/template-for-gradle-plugins digest to bd96f38 ([64ed8c6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/64ed8c66963ae44c3bc294ae06f2a20edead1ba7))
+
 ## [2.0.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.0.2...2.0.3) (2022-06-29)
 
 
