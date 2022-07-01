@@ -11,11 +11,11 @@ inputs:
     required: false
   build-command:
     description: 'The command executed in the build phase'
-    default: './gradlew assemble --parallel'
+    default: './gradlew assemble --parallel || ./gradlew assemble --parallel'
     required: false
   check-command:
     description: 'The command executed in the check phase'
-    default: './gradlew check --parallel'
+    default: './gradlew check --parallel || ./gradlew check --parallel'
     required: false
   clean-command:
     description: 'The command executed in the final clean phase'
