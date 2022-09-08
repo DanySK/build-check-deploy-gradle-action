@@ -1,3 +1,19 @@
+## [2.1.6](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.5...2.1.6) (2022-09-08)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 0553e11 ([bd197cf](https://github.com/DanySK/build-check-deploy-gradle-action/commit/bd197cff705fe3505a1be176fd3655f9b7937788))
+* **deps:** update danysk/template-for-gradle-plugins digest to 3d66256 ([596ebc0](https://github.com/DanySK/build-check-deploy-gradle-action/commit/596ebc00aaf2b8dccfbcd0ed0876b268ff3048ea))
+* **deps:** update danysk/template-for-gradle-plugins digest to 6d13fba ([ecb0a6a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ecb0a6aafce7e581fb2140ef79af2f405a11b835))
+* **deps:** update danysk/template-for-gradle-plugins digest to c20e68b ([8e881d1](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8e881d1aa9a8e83281ce229f19b19b1297f3391a))
+
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v3.5.0 ([58d759c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/58d759cd18cb5ec263a5a38036d475945a810d88))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.11 ([7e501ab](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7e501abbaedbb4a2e551b60ef2c3c02e11322d83))
+
 ## [2.1.5](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.4...2.1.5) (2022-08-22)
 
 
