@@ -1,3 +1,18 @@
+## [2.1.14](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.13...2.1.14) (2022-10-31)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 0d2001a ([2432957](https://github.com/DanySK/build-check-deploy-gradle-action/commit/24329574c87da9b0f4286e75613553f6fb4fa41d))
+* **deps:** update danysk/template-for-gradle-plugins digest to 3535ce6 ([b41ed87](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b41ed87a2f75fd5adf7e41c8b7ab9c380c5293fd))
+* **deps:** update danysk/template-for-gradle-plugins digest to 3700c82 ([dee0aa7](https://github.com/DanySK/build-check-deploy-gradle-action/commit/dee0aa7428571ff388d819e0b4f4bca688debd61))
+
+
+### Dependency updates
+
+* **core-deps:** update al-cheb/configure-pagefile-action action to v1.3 ([a817d85](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a817d850aa035a77da570e3d746f6e5220253a0b))
+* **deps:** update node.js to 18.12 ([7f0140f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7f0140fec0c887f2bbdfaa245975fb923a104f61))
+
 ## [2.1.13](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.12...2.1.13) (2022-10-28)
 
 
