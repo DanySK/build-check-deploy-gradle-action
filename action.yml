@@ -114,6 +114,8 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Fail for no reason
+      run: false
     - name: Validate the Gradle Wrapper
       if: inputs.should-validate-wrapper == 'true'
       uses: gradle/wrapper-validation-action@v1.0.5
