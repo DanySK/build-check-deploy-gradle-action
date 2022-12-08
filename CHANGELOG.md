@@ -1,3 +1,10 @@
+## [2.1.17](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.16...2.1.17) (2022-12-08)
+
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v3.8.0 ([d35dfd0](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d35dfd09fcad039f4297953302b6156b293dae50))
+
 ## [2.1.16](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.15...2.1.16) (2022-12-06)
 
 
