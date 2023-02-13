@@ -1,3 +1,10 @@
+## [2.1.24](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.23...2.1.24) (2023-02-13)
+
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v3.2.5 ([e394136](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e3941365552b1d121618915e5422a693d1699930))
+
 ## [2.1.23](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.22...2.1.23) (2023-02-11)
 
 
