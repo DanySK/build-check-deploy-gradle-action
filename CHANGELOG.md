@@ -1,3 +1,15 @@
+## [2.1.26](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.25...2.1.26) (2023-02-21)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to eccf761 ([758d847](https://github.com/DanySK/build-check-deploy-gradle-action/commit/758d84763fce9189507e2b14233299125a01d623))
+
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v3.2.6 ([25ede1f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/25ede1fad5f77ac88da50c878fb70354d666a8ea))
+
 ## [2.1.25](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.24...2.1.25) (2023-02-19)
 
 
