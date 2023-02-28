@@ -11,8 +11,8 @@ jobs:
   test:
     strategy:
       matrix:
-        os: [windows, macos, ubuntu]
-    runs-on: ${{ matrix.os }}-latest
+        os: [ windows-2022, macos-12, ubuntu-22.04 ]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3.3.0
@@ -52,7 +52,7 @@ jobs:
     if: github.event_name == 'push'
     needs:
       - test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3.3.0
@@ -62,3 +62,16 @@ jobs:
         run: |
           npm install
           npx semantic-release
+  success:
+    runs-on: ubuntu-22.04
+    needs:
+      - test
+      - release
+    if: >-
+      always() && (
+        contains(join(needs.*.result, ','), 'failure')
+        || !contains(join(needs.*.result, ','), 'cancelled')
+      )
+    steps:
+      - name: Verify that there were no failures
+        run: ${{ !contains(join(needs.*.result, ','), 'failure') }}
