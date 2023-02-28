@@ -25,9 +25,9 @@ pull_request_rules:
         - or: *authors_are_bots
         - and:
           - or:
-            - check-success=ci-cd / success
-            - check-neutral=ci-cd / success
-            - check-skipped=ci-cd / success
+            - check-success=success
+            - check-neutral=success
+            - check-skipped=success
           - "#review-threads-unresolved=0"
           - "#commits-behind=0"
       - label=dependencies
