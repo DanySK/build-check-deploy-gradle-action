@@ -1,3 +1,25 @@
+## [2.2.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.26...2.2.0) (2023-03-02)
+
+
+### Features
+
+* cache konan files to speed up the compilation time in kt-MP projects ([7203e70](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7203e703ec7b51784122b2b90b37bee79ae98c04))
+
+
+### Bug Fixes
+
+* **release:** checkout the repo using a push-enabled token ([9fe0f6a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9fe0f6ae7b834b6e0e50d5cb89940aaac5e967e2))
+* **release:** use a token that can push to master for releasing ([4225bb3](https://github.com/DanySK/build-check-deploy-gradle-action/commit/4225bb3ba09ed6f10fe92be80eaceaced57a9cb6))
+
+
+### Build and continuous integration
+
+* add a success task ([3e5e597](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3e5e59741ae069af88cbdc3ff02869623c44aeaa))
+* add concurrency and auto-cancel check ([45c4dd7](https://github.com/DanySK/build-check-deploy-gradle-action/commit/45c4dd7cf3e8831f9d1055692d2853a662e505a1))
+* **deps:** update danysk/template-for-gradle-plugins digest to 24fc5ff ([5c00ac8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/5c00ac80dfbc688a14ba1ab1c6c85550f6ff826c))
+* **deps:** update danysk/template-for-gradle-plugins digest to 5ff810f ([b83c2a5](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b83c2a561d6bfcb69a9cd67398a3f06d1507f629))
+* **deps:** update danysk/template-for-gradle-plugins digest to d9b8794 ([e303062](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e3030629fb85102d4ab94fb756297e5b7dfa3f12))
+
 ## [2.1.26](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.1.25...2.1.26) (2023-02-21)
 
 
