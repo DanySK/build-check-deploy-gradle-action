@@ -18,7 +18,7 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.4.0
+        uses: actions/checkout@v3.5.0
         with:
           path: 'action'
       - name: Trick Renovate
@@ -35,7 +35,7 @@ jobs:
           echo "Computed version: \"${USES#*@}\""
           echo "::set-output name=version::${USES#*@}"
       - name: Checkout test repo
-        uses: actions/checkout@v3.4.0
+        uses: actions/checkout@v3.5.0
         with:
           repository: DanySK/Template-for-Gradle-Plugins
           path: 'target'
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.4.0
+        uses: actions/checkout@v3.5.0
         with:
           token: ${{ secrets.DEPLOYMENT_TOKEN }} 
       - name: Semantic Release
