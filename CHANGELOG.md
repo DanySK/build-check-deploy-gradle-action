@@ -1,3 +1,22 @@
+## [2.2.2](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.1...2.2.2) (2023-03-28)
+
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v3.11.0 ([ea0437b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ea0437b0ffcfce2d66e38723150e44b8af68acfe))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.19 ([740a47e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/740a47e219f72ae8d1d12ae7fc6658e8efa0915a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.20 ([2343bd7](https://github.com/DanySK/build-check-deploy-gradle-action/commit/2343bd7e7b53c38ad25c37f6746a1c62e57675ac))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.5.0 ([782ca43](https://github.com/DanySK/build-check-deploy-gradle-action/commit/782ca435193d17fbc29f95cd16265b68513e31ab))
+* **deps:** update danysk/template-for-gradle-plugins digest to 31b12ed ([7878647](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7878647bedb583b35e1eeb7b0cfdf0240436410b))
+* **deps:** update danysk/template-for-gradle-plugins digest to a46c2de ([03117d0](https://github.com/DanySK/build-check-deploy-gradle-action/commit/03117d0bb744050fa641030709f3d55d13fe4f7f))
+* **deps:** update danysk/template-for-gradle-plugins digest to b1dba64 ([284847c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/284847c99dc810bfc388f46abf5c1e834c6d0663))
+* **deps:** update danysk/template-for-gradle-plugins digest to bdd0913 ([c0c0e8b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c0c0e8b8e37dacff45646f4f0f2608a49a2bd382))
+* **deps:** update danysk/template-for-gradle-plugins digest to c6feaf5 ([e3ab25c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e3ab25c1e24e06cc658f195e1c54d86380242e52))
+
 ## [2.2.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.0...2.2.1) (2023-03-24)
 
 
