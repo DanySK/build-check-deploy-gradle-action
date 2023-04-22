@@ -1,3 +1,33 @@
+## [2.2.4](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.3...2.2.4) (2023-04-22)
+
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v3.1.3 ([0bbe3e9](https://github.com/DanySK/build-check-deploy-gradle-action/commit/0bbe3e95eb9c95cd11ee60c5b30f6e6d94b92c8d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.24 ([bba724d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/bba724db97c1522541fcc13b63dbe11983c36b0a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.25 ([4964417](https://github.com/DanySK/build-check-deploy-gradle-action/commit/496441724e5f2c64969eaa8eda1c981c0a218005))
+* **deps:** update node.js to 18.16 ([20f1fd4](https://github.com/DanySK/build-check-deploy-gradle-action/commit/20f1fd4d1f1bac144b64a8d95f87951f4ec22374))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.5.1 ([60c3389](https://github.com/DanySK/build-check-deploy-gradle-action/commit/60c3389fa0eb16ded00dc4ed9cf21d1405d16433))
+* **deps:** update actions/checkout action to v3.5.2 ([6cb5e7b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6cb5e7b9056e2491d3a233721842b0744e53be66))
+* **deps:** update danysk/template-for-gradle-plugins digest to 016694d ([103e41f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/103e41fed84a07d0c702aaac45ff1fb8e45c7057))
+* **deps:** update danysk/template-for-gradle-plugins digest to 36bd420 ([592766d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/592766d87dc4e520e57a2e01d24b4a9e05289ee0))
+* **deps:** update danysk/template-for-gradle-plugins digest to 4eb5f4b ([9870a54](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9870a54af7ff6cc936f2b9e283c007ed73bad984))
+* **deps:** update danysk/template-for-gradle-plugins digest to 64c25ab ([c757ab1](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c757ab1f9b0396eac31893f60dd4f8b1204dc57d))
+* **deps:** update danysk/template-for-gradle-plugins digest to 780898b ([0309872](https://github.com/DanySK/build-check-deploy-gradle-action/commit/0309872b1ac6af3d4214d1312f9977da88f0574e))
+* **deps:** update danysk/template-for-gradle-plugins digest to 85f2ab4 ([7bc367c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7bc367cdfda522f1989569715163606558d0d606))
+* **deps:** update danysk/template-for-gradle-plugins digest to 891db81 ([6aeecfd](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6aeecfd945175422b03b377b762e3960372a80ce))
+* **deps:** update danysk/template-for-gradle-plugins digest to a5d9de4 ([c7e887b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c7e887bc6894ba222deafda22fc5f3351ffc5510))
+* **deps:** update danysk/template-for-gradle-plugins digest to ae07a64 ([b28a58d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b28a58d83fff63cafb8e1867f1c6b20409ff4040))
+* **deps:** update danysk/template-for-gradle-plugins digest to bab76ee ([7d4ac90](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7d4ac9047cf3ed3d403ab9e64e683692706a6d0d))
+* **deps:** update danysk/template-for-gradle-plugins digest to d5396b4 ([bfac2ba](https://github.com/DanySK/build-check-deploy-gradle-action/commit/bfac2ba50cf8b37b58259b19d90dfd9855a31582))
+* **deps:** update danysk/template-for-gradle-plugins digest to d8614a9 ([96f8a55](https://github.com/DanySK/build-check-deploy-gradle-action/commit/96f8a55c1444f3cfef1f75c8fc330bdcf087ef74))
+* **deps:** update danysk/template-for-gradle-plugins digest to ebd775b ([99e027e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/99e027eb77ab1ef7c56e7a3fe6ab9bf0082b0a0f))
+* **deps:** update danysk/template-for-gradle-plugins digest to ec7bd4a ([1d3fa91](https://github.com/DanySK/build-check-deploy-gradle-action/commit/1d3fa917debe1b0e2bc67fd29221865871f99058))
+
 ## [2.2.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.2...2.2.3) (2023-04-11)
 
 
