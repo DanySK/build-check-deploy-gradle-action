@@ -28,7 +28,7 @@ jobs:
           # Idea: the regex matcher of Renovate keeps this string up to date automatically
           # The version is extracted and used to access the correct version of the scripts
           USES=$(cat <<TRICK_RENOVATE
-          - uses: DanySK/Template-for-Gradle-Plugins@158338f7b536a8372a8eda1272c11bb112a01db4
+          - uses: DanySK/Template-for-Gradle-Plugins@8eb690d5d46d85720b99840fb5784efd19d7ab65
           TRICK_RENOVATE
           )
           echo "Scripts update line: \"$USES\""
