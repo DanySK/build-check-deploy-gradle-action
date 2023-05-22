@@ -1,3 +1,15 @@
+## [2.2.6](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.5...2.2.6) (2023-05-22)
+
+
+### Bug Fixes
+
+* use mavenCentral naming for gradle properties ([4bd3c7c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/4bd3c7c9d6bdde7cc4c5d3b093b1852fbdffac1d))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to e58daeb ([32edb4b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/32edb4bad9ae4036f076fd6c1d742f59720c5d7d))
+
 ## [2.2.5](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.4...2.2.5) (2023-05-15)
 
 
