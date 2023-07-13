@@ -25,8 +25,11 @@ def log(*args):
 
 
 def attempt():
-    print(CMD)
-    status = os.system(CMD)
+    cmd = CMD
+    if "win" in sys.platform:
+        cmd = "bash -c " + cmd
+    print(cmd)
+    status = os.system(cmd)
     status = os.waitstatus_to_exitcode(status)
     if status == 0:
         log(f"Done")
