@@ -121,9 +121,6 @@ inputs:
 
 runs:
   using: composite
-  env:
-    RETRY_TIME: ${{ inputs.retry-delay }}
-    MAX_RETRIES: ${{ inputs.max-attempts }}
   steps:
     - name: Validate the Gradle Wrapper
       if: inputs.should-validate-wrapper == 'true'
@@ -155,7 +152,9 @@ runs:
         restore-keys: |
           ${{ runner.os }}-gradle-
     - name: Restore pip dependencies
+      working-directory: ${{ inputs.working-directory }}
       run: pip install -r ${{ github.action_path }}/requirements.txt
+      shell: bash
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
@@ -170,6 +169,9 @@ runs:
         echo "::group::Build"
         python ${{ github.action_path }}/retry.py ${{ inputs.build-command }}
         echo "::endgroup::"
+      env:
+        RETRY_TIME: ${{ inputs.retry-delay }}
+        MAX_RETRIES: ${{ inputs.max-attempts }}
     - name: Check
       shell: bash
       working-directory: ${{ inputs.working-directory }}
@@ -177,6 +179,9 @@ runs:
         echo "::group::Check"
         python ${{ github.action_path }}/retry.py ${{ inputs.check-command }}
         echo "::endgroup::"
+      env:
+        RETRY_TIME: ${{ inputs.retry-delay }}
+        MAX_RETRIES: ${{ inputs.max-attempts }}
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
       uses: codecov/codecov-action@v3.1.4
@@ -187,6 +192,8 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       env:
+        RETRY_TIME: ${{ inputs.retry-delay }}
+        MAX_RETRIES: ${{ inputs.max-attempts }}
         CUSTOM_SECRET_0: ${{ inputs.custom-secret-0 }}
         CUSTOM_SECRET_1: ${{ inputs.custom-secret-1 }}
         CUSTOM_SECRET_2: ${{ inputs.custom-secret-2 }}
@@ -220,6 +227,9 @@ runs:
         echo "::group::Cleanup"
         python ${{ github.action_path }}/retry.py ${{ inputs.clean-command }}
         echo "::endgroup::"
+      env:
+        RETRY_TIME: ${{ inputs.retry-delay }}
+        MAX_RETRIES: ${{ inputs.max-attempts }}
     - name: Turn off the Gradle Daemon
       shell: bash
       working-directory: ${{ inputs.working-directory }}
