@@ -110,9 +110,20 @@ inputs:
   npm-token:
     description: 'Authorization token for the NPM registry of choice, it will be exposed in the deployment step as the environment variable ORG_GRADLE_PROJECT_npmToken'
     required: false
+  max-attempts:
+    description: 'Maximum amount of attempts when retrying a stage'
+    required: false
+    default: '1'
+  retry-delay:
+    description: 'Time to be waited among any two attempts'
+    required: false
+    default: '1m'
 
 runs:
   using: composite
+  env:
+    RETRY_TIME: ${{ inputs.retry-delay }}
+    MAX_RETRIES: ${{ inputs.max-attempts }}
   steps:
     - name: Validate the Gradle Wrapper
       if: inputs.should-validate-wrapper == 'true'
@@ -143,26 +154,28 @@ runs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
+    - name: Restore pip dependencies
+      run: pip install -r ${{ github.action_path }}/requirements.txt
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
         echo "::group::Pre-build"
-        ${{ inputs.pre-build-command }}
+        python ${{ github.action_path }}/retry.py ${{ inputs.pre-build-command }}
         echo "::endgroup::"
     - name: Build
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Build"
-        ${{ inputs.build-command }}
+        python ${{ github.action_path }}/retry.py ${{ inputs.build-command }}
         echo "::endgroup::"
     - name: Check
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Check"
-        ${{ inputs.check-command }}
+        python ${{ github.action_path }}/retry.py ${{ inputs.check-command }}
         echo "::endgroup::"
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
@@ -198,14 +211,14 @@ runs:
         ORG_GRADLE_PROJECT_npmToken: ${{ inputs.npm-token }}
       run: |
         echo "::group::Deploy"
-        ${{ inputs.deploy-command }}
+        python ${{ github.action_path }}/retry.py ${{ inputs.deploy-command }}
         echo "::endgroup::"
     - name: Cleanup
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
         echo "::group::Cleanup"
-        ${{ inputs.clean-command }}
+        python ${{ github.action_path }}/retry.py ${{ inputs.clean-command }}
         echo "::endgroup::"
     - name: Turn off the Gradle Daemon
       shell: bash
