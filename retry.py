@@ -2,9 +2,7 @@ import os
 from pytimeparse.timeparse import timeparse
 import sys
 import time
-
-
-WIN = any(platform in sys.platform for platform in { 'win32', 'cygwin' }) or (os.name == 'nt')
+import subprocess
 
 
 CMD = " ".join(sys.argv[1:])
@@ -28,12 +26,8 @@ def log(*args):
 
 
 def attempt():
-    cmd = CMD
-    if WIN:
-        cmd = "bash -c " + cmd
-    print(cmd)
-    status = os.system(cmd)
-    status = os.waitstatus_to_exitcode(status)
+    print(CMD)
+    status = subprocess.call(["bash", "-c", CMD])
     if status == 0:
         log(f"Done")
         sys.exit(0)
