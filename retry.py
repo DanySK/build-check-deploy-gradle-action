@@ -4,6 +4,9 @@ import sys
 import time
 
 
+WIN = any(platform in sys.platform for platform in { 'win32', 'cygwin' }) or (os.name == 'nt')
+
+
 CMD = " ".join(sys.argv[1:])
 RETRY_TIME = os.environ.get("RETRY_TIME", "1m")
 DT = timeparse(RETRY_TIME)
@@ -26,7 +29,7 @@ def log(*args):
 
 def attempt():
     cmd = CMD
-    if "win" in sys.platform:
+    if WIN:
         cmd = "bash -c " + cmd
     print(cmd)
     status = os.system(cmd)
