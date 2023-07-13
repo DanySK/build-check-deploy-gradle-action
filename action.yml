@@ -152,22 +152,22 @@ runs:
         restore-keys: |
           ${{ runner.os }}-gradle-
     - name: Restore pip dependencies
-      working-directory: ${{ inputs.working-directory }}
-      run: pip install -r ${{ github.action_path }}/requirements.txt
+      working-directory: ${{ github.action_path }}
+      run: pip3 install -r requirements.txt
       shell: bash
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
         echo "::group::Pre-build"
-        python ${{ github.action_path }}/retry.py ${{ inputs.pre-build-command }}
+        python3 ${{ github.action_path }}/retry.py ${{ inputs.pre-build-command }}
         echo "::endgroup::"
     - name: Build
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Build"
-        python ${{ github.action_path }}/retry.py ${{ inputs.build-command }}
+        python3 ${{ github.action_path }}/retry.py ${{ inputs.build-command }}
         echo "::endgroup::"
       env:
         RETRY_TIME: ${{ inputs.retry-delay }}
@@ -177,7 +177,7 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Check"
-        python ${{ github.action_path }}/retry.py ${{ inputs.check-command }}
+        python3 ${{ github.action_path }}/retry.py ${{ inputs.check-command }}
         echo "::endgroup::"
       env:
         RETRY_TIME: ${{ inputs.retry-delay }}
@@ -218,14 +218,14 @@ runs:
         ORG_GRADLE_PROJECT_npmToken: ${{ inputs.npm-token }}
       run: |
         echo "::group::Deploy"
-        python ${{ github.action_path }}/retry.py ${{ inputs.deploy-command }}
+        python3 ${{ github.action_path }}/retry.py ${{ inputs.deploy-command }}
         echo "::endgroup::"
     - name: Cleanup
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
         echo "::group::Cleanup"
-        python ${{ github.action_path }}/retry.py ${{ inputs.clean-command }}
+        python3 ${{ github.action_path }}/retry.py ${{ inputs.clean-command }}
         echo "::endgroup::"
       env:
         RETRY_TIME: ${{ inputs.retry-delay }}
