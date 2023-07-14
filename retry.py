@@ -5,10 +5,13 @@ import time
 import subprocess
 
 
+WIN = any(platform in sys.platform for platform in { 'win32', 'cygwin' }) or (os.name == 'nt')
+BASH = "C:\\Program Files\\Git\\bin\\bash.exe" if WIN else "bash"
 CMD = " ".join(sys.argv[1:])
 RETRY_TIME = os.environ.get("RETRY_TIME", "1m")
 DT = timeparse(RETRY_TIME)
 MAX = int(os.environ.get("MAX_RETRIES", "3"))
+
 
 if not CMD:
     raise ValueError("Invalid command: " + CMD)
@@ -27,7 +30,7 @@ def log(*args):
 
 def attempt():
     print(CMD)
-    status = subprocess.call(["bash", "-c", CMD])
+    status = subprocess.call([BASH, "-c", CMD])
     if status == 0:
         log(f"Done")
         sys.exit(0)
