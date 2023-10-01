@@ -1,3 +1,18 @@
+## [2.2.10](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.9...2.2.10) (2023-10-01)
+
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v3.13.0 ([9776d00](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9776d00f96655e622dc48a361f264d18cdd4f259))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.55 ([91ad95e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/91ad95e87babf5fb1907b6595c927468f8c5d215))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.65 ([b9d21e2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b9d21e2e186721b4fabf77018a968121e17ab431))
+* **deps:** update node.js to 18.18 ([7eb6105](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7eb6105a84438b89372561d0afbdb9bd50a5b675))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.0 ([4e9febb](https://github.com/DanySK/build-check-deploy-gradle-action/commit/4e9febb6f5d7094f64792f253f847193f4d1c9cd))
+
 ## [2.2.9](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.8...2.2.9) (2023-09-15)
 
 
