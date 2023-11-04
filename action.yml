@@ -131,6 +131,8 @@ runs:
     - name: Configure the Windows Pagefile
       if: ${{ runner.os == 'Windows' }}
       uses: al-cheb/configure-pagefile-action@v1.3
+      with:
+        disk-root: C:
     - name: Cache Gradle packages
       uses: actions/cache@v3.3.2
       with:
