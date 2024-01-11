@@ -1,3 +1,43 @@
+## [2.2.13](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.12...2.2.13) (2024-01-11)
+
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v3.3.3 ([b92f362](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b92f36289063f14496e001dc63382341bd788ee6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.79 ([d3f0e5e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d3f0e5ee014f680390d385e56d83f301742b68e7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.80 ([09a57b3](https://github.com/DanySK/build-check-deploy-gradle-action/commit/09a57b3846fd5e6ec8519bc2c116c67c53b9df28))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.81 ([219df1e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/219df1e62c06a8d895eef699266c10a540ae6e79))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.82 ([8f7b7de](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8f7b7dea15153135fc141ee6ebe6198b6f23642c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.83 ([b5b4962](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b5b496251d9fc6f572be3892dd7aa067d5aa0744))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.84 ([f559c3b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f559c3bb43aca8e35e69f9a0326bce1b8acf8099))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.85 ([e0e8ef3](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e0e8ef3750f84ae5a95e9d685d5853be84dbe57c))
+* **deps:** update node.js to 20.11 ([1b6e70a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/1b6e70a8ec271832d53efc1257a292b335d3868c))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 0680a88 ([dee8379](https://github.com/DanySK/build-check-deploy-gradle-action/commit/dee8379f8bac6a100bdf07f8e1e33b02c6ba1818))
+* **deps:** update danysk/template-for-gradle-plugins digest to 10935b7 ([9b2e3cf](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9b2e3cf98a7ce517a41b8d55f9bd8233325dc10c))
+* **deps:** update danysk/template-for-gradle-plugins digest to 19b9513 ([cf01ef2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/cf01ef2f60945c9af74baa9e857972750f31006e))
+* **deps:** update danysk/template-for-gradle-plugins digest to 28bf7ed ([0676a21](https://github.com/DanySK/build-check-deploy-gradle-action/commit/0676a21d881ef1c493aea85680f29684c86798df))
+* **deps:** update danysk/template-for-gradle-plugins digest to 28cbc9b ([73173db](https://github.com/DanySK/build-check-deploy-gradle-action/commit/73173db7f0d4a850f32248c4fa5c9895d9534f01))
+* **deps:** update danysk/template-for-gradle-plugins digest to 3453346 ([23110c5](https://github.com/DanySK/build-check-deploy-gradle-action/commit/23110c54625bd1e64d188849cbfbf8d28d278caa))
+* **deps:** update danysk/template-for-gradle-plugins digest to 3ee6353 ([07cc845](https://github.com/DanySK/build-check-deploy-gradle-action/commit/07cc845299b4cf7c5609fcfaab1da162d1a1d1d8))
+* **deps:** update danysk/template-for-gradle-plugins digest to 4c665d2 ([09e5b62](https://github.com/DanySK/build-check-deploy-gradle-action/commit/09e5b622ff85333f6b77e7a1fb552d1c40fb8891))
+* **deps:** update danysk/template-for-gradle-plugins digest to 4f5c164 ([42c6415](https://github.com/DanySK/build-check-deploy-gradle-action/commit/42c64150ff53b12ef9d8b973203928e7bec3d2fc))
+* **deps:** update danysk/template-for-gradle-plugins digest to 6130bac ([875d130](https://github.com/DanySK/build-check-deploy-gradle-action/commit/875d130c5c5a713c6a537a463563affa2d6e0717))
+* **deps:** update danysk/template-for-gradle-plugins digest to 6814552 ([5baa38f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/5baa38fbb71811216c77bb342e068102f39c8809))
+* **deps:** update danysk/template-for-gradle-plugins digest to 8d5b053 ([0765cd8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/0765cd817a5a577fb7902e31de411cca5d9da04a))
+* **deps:** update danysk/template-for-gradle-plugins digest to acca6cf ([f9ef8c3](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f9ef8c37e9c1d2cd58e86790f8879c52a1cabf00))
+* **deps:** update danysk/template-for-gradle-plugins digest to b083f00 ([9b192e3](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9b192e3d24cdf040d422000aacba585d5fa6a800))
+* **deps:** update danysk/template-for-gradle-plugins digest to bd2cb78 ([c5b2cb6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c5b2cb67704c4b46a7377d8aa4209f3a2793d766))
+* **deps:** update danysk/template-for-gradle-plugins digest to c9f04a1 ([3479f05](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3479f056e893d4b2140a53c2a1850fa5edb89a97))
+* **deps:** update danysk/template-for-gradle-plugins digest to ce69a34 ([134ed33](https://github.com/DanySK/build-check-deploy-gradle-action/commit/134ed33236894f979775a6cf53cf8a30dc48e194))
+* **deps:** update danysk/template-for-gradle-plugins digest to eb4aa8d ([22be46b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/22be46b3b0e78aa4300981d3926e917495b5d12c))
+* **deps:** update danysk/template-for-gradle-plugins digest to f08ad26 ([ae17fd8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ae17fd81fbe2e55af4c82e1582071ad8a44bc998))
+* **deps:** update danysk/template-for-gradle-plugins digest to f21d53b ([1beb61a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/1beb61a793d5b72ef3e0da388aa414b9ddd78291))
+* **deps:** update danysk/template-for-gradle-plugins digest to f89105d ([145d05e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/145d05ea882bd128d05ee2b98ec03f0b78e49155))
+
 ## [2.2.12](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.11...2.2.12) (2023-11-29)
 
 
