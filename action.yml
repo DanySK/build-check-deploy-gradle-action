@@ -134,7 +134,7 @@ runs:
       with:
         disk-root: 'C:'
     - name: Cache Gradle packages
-      uses: actions/cache@v3.3.3
+      uses: actions/cache@v4.0.0
       with:
         path: |
           ~/.gradle/caches
