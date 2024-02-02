@@ -1,3 +1,15 @@
+## [2.2.20](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.19...2.2.20) (2024-02-02)
+
+
+### Dependency updates
+
+* **core-deps:** update al-cheb/configure-pagefile-action action to v1.4 ([719f566](https://github.com/DanySK/build-check-deploy-gradle-action/commit/719f5669621a07649afa24f1a7ca89260e1d56c8))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 7ebf6d7 ([c22d30f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c22d30f723e8fb1157cd8e83fde085b323ba0da2))
+
 ## [2.2.19](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.18...2.2.19) (2024-02-01)
 
 
