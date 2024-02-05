@@ -1,3 +1,19 @@
+## [2.3.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.20...2.3.0) (2024-02-05)
+
+
+### Features
+
+* add a failure-retry mechanism ([#509](https://github.com/DanySK/build-check-deploy-gradle-action/issues/509)) ([ef24a11](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ef24a117b745874cbbe2756f0a8bb5ac722c42c4))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 08bca9e ([e982276](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e982276616779c00da97d848a1a9038c4a0b59ab))
+* **deps:** update danysk/template-for-gradle-plugins digest to 36dbc07 ([3ed256a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3ed256a825ad5a8d489963ffe2401a2dc713f8b4))
+* **deps:** update danysk/template-for-gradle-plugins digest to aa885ee ([0b5ec71](https://github.com/DanySK/build-check-deploy-gradle-action/commit/0b5ec7101a8eea6cb75f488bc0c2cc75680c65ed))
+* **deps:** update danysk/template-for-gradle-plugins digest to b425098 ([257a9cd](https://github.com/DanySK/build-check-deploy-gradle-action/commit/257a9cd8333c035cb739f1a4a7345cccb01281c5))
+* **deps:** update danysk/template-for-gradle-plugins digest to e28ab68 ([f176826](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f176826703cac67e49e9bb4af64290d6e01fef5a))
+
 ## [2.2.20](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.2.19...2.2.20) (2024-02-02)
 
 
