@@ -21,6 +21,14 @@ inputs:
     description: 'The command executed in the final clean phase'
     default: 'true'
     required: false
+  retries-on-failure:
+    description: 'How many times every command should be retried before giving up'
+    default: '1'
+    required: false
+  wait-between-retries:
+    description: 'How many seconds to wait after a step failure before attempting a new run'
+    default: '5'
+    required: false
   codecov-directory:
     description: 'The location where CodeCov searches for coverage information'
     default: build
@@ -149,21 +157,30 @@ runs:
       shell: bash
       run: |
         echo "::group::Pre-build"
-        ${{ inputs.pre-build-command }}
+        COMMAND='${{ inputs.pre-build-command }}'
+        for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
+          $(echo $COMMAND) && break || sleep "${{ wait-between-retries }}"
+        done
         echo "::endgroup::"
     - name: Build
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Build"
-        ${{ inputs.build-command }}
+        COMMAND='${{ inputs.build-command }}'
+        for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
+          $(echo $COMMAND) && break || sleep "${{ wait-between-retries }}"
+        done
         echo "::endgroup::"
     - name: Check
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Check"
-        ${{ inputs.check-command }}
+        COMMAND='${{ inputs.check-command }}'
+        for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
+          $(echo $COMMAND) && break || sleep "${{ wait-between-retries }}"
+        done
         echo "::endgroup::"
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
@@ -199,7 +216,10 @@ runs:
         ORG_GRADLE_PROJECT_npmToken: ${{ inputs.npm-token }}
       run: |
         echo "::group::Deploy"
-        ${{ inputs.deploy-command }}
+        COMMAND='${{ inputs.deploy-command }}'
+        for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
+          $(echo $COMMAND) && break || sleep "${{ wait-between-retries }}"
+        done
         echo "::endgroup::"
     - name: Cleanup
       working-directory: ${{ inputs.working-directory }}
