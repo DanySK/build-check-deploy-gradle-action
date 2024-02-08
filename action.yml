@@ -154,6 +154,7 @@ runs:
           ${{ runner.os }}-gradle-
     - name: Compute the heredoc id
       id: hd-id
+      shell: bash
       run: echo heredoc=${{ github.sha }} >> $GITHUB_OUTPUT
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
