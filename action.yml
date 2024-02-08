@@ -23,7 +23,7 @@ inputs:
     required: false
   retries-on-failure:
     description: 'How many times every command should be retried before giving up'
-    default: '1'
+    default: '2'
     required: false
   wait-between-retries:
     description: 'How many seconds to wait after a step failure before attempting a new run'
@@ -152,14 +152,20 @@ runs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
+    - name: Compute the heredoc id
+      id: hd-id
+      shell: bash
+      run: echo heredoc=${{ github.sha }} >> $GITHUB_OUTPUT
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
-        echo "::group::Pre-build"
-        COMMAND='${{ inputs.pre-build-command }}'
+        echo "::group::Pre-Build"
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          $(echo $COMMAND) && break || sleep "${{ inputs.wait-between-retries }}"
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
+          {
+            ${{ inputs.pre-build-command }}
+          } && break || sleep "${{ inputs.wait-between-retries }}"
         done
         echo "::endgroup::"
     - name: Build
@@ -169,7 +175,10 @@ runs:
         echo "::group::Build"
         COMMAND='${{ inputs.build-command }}'
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          $(echo $COMMAND) && break || sleep "${{ inputs.wait-between-retries }}"
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
+          {
+            ${{ inputs.build-command }}
+          } && break || sleep "${{ inputs.wait-between-retries }}"
         done
         echo "::endgroup::"
     - name: Check
@@ -177,9 +186,11 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Check"
-        COMMAND='${{ inputs.check-command }}'
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          $(echo $COMMAND) && break || sleep "${{ inputs.wait-between-retries }}"
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
+          {
+            ${{ inputs.check-command }}
+          } && break || sleep "${{ inputs.wait-between-retries }}"
         done
         echo "::endgroup::"
     - name: CodeCov
@@ -216,9 +227,11 @@ runs:
         ORG_GRADLE_PROJECT_npmToken: ${{ inputs.npm-token }}
       run: |
         echo "::group::Deploy"
-        COMMAND='${{ inputs.deploy-command }}'
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          $(echo $COMMAND) && break || sleep "${{ inputs.wait-between-retries }}"
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
+          {
+            ${{ inputs.deploy-command }}
+          } && break || sleep "${{ inputs.wait-between-retries }}"
         done
         echo "::endgroup::"
     - name: Cleanup
