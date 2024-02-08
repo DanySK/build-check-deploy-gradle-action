@@ -161,6 +161,7 @@ runs:
       run: |
         COMMAND='${{ inputs.pre-build-command }}'
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
+          echo 'Attempt $attempt/${{ inputs.retries-on-failure}}'
           source <(<<'${{ steps.hd-id.outputs.heredoc }}'
         ${{ inputs.pre-build-command }}
         ${{ steps.hd-id.outputs.heredoc }}
