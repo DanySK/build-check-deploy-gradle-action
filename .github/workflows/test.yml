@@ -8,39 +8,48 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ windows-2022, macos-12, ubuntu-22.04 ]
-    runs-on: ${{ matrix.os }}
+  select-tests:
+    runs-on: ubuntu-22.04
     concurrency:
-      group: ${{ github.workflow }}-build-${{ matrix.os }}-${{ github.event.number || github.ref }}
+      group: ${{ github.workflow }}-select-tests-${{ github.event.number || github.ref }}
       cancel-in-progress: true
+    outputs:
+      tests: ${{ steps.trick.outputs.tests }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-        with:
-          path: 'action'
       - name: Trick Renovate
         id: trick
         shell: bash
         run: |
-          # Idea: the regex matcher of Renovate keeps this string up to date automatically
-          # The version is extracted and used to access the correct version of the scripts
           USES=$(cat <<TRICK_RENOVATE
           - uses: DanySK/Template-for-Gradle-Plugins@cb970302120bb0b6a01ab495695a9f31babb83c7
+          - uses: DanySK/Template-for-Kotlin-Multiplatform-Projects@0.1.22
           TRICK_RENOVATE
           )
-          echo "Scripts update line: \"$USES\""
-          echo "Computed version: \"${USES#*@}\""
-          echo "::set-output name=version::${USES#*@}"
+          export USES="$USES"
+          ruby -e 'puts "tests=#{ENV["USES"].lines.map { |line| /^-\s+uses:\s+([^\s]+\/[^\s]+)@(.*)\s*$/.match(line) }.map { |match| [match[1], match[2]] }}"' >> $GITHUB_OUTPUT
+  test:
+    needs:
+      - select-tests
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ windows-2022, macos-12, ubuntu-22.04 ]
+        test: ${{ fromJson(needs.select-tests.outputs.tests) }}
+    runs-on: ${{ matrix.os }}
+    concurrency:
+      group: ${{ github.workflow }}-test-${{ matrix.os }}-${{ matrix.test[0] }}-${{ matrix.test[1] }}-${{ github.event.number || github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        with:
+          path: 'action'
       - name: Checkout test repo
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
-          repository: DanySK/Template-for-Gradle-Plugins
+          repository: ${{ matrix.test[0] }}
           path: 'target'
-          ref: ${{ steps.trick.outputs.version }}
+          ref: ${{ matrix.test[1] }}
       - uses: ./action
         with:
           build-command: ./gradlew tasks
@@ -61,7 +70,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
-          token: ${{ secrets.DEPLOYMENT_TOKEN }} 
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -71,6 +80,7 @@ jobs:
   success:
     runs-on: ubuntu-22.04
     needs:
+      - select-tests
       - test
       - release
     if: >-
