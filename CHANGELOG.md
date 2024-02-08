@@ -1,3 +1,16 @@
+## [2.4.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.3.2...2.4.0) (2024-02-08)
+
+
+### Features
+
+* auto-retry commands twice and improve support for multiline programs ([#517](https://github.com/DanySK/build-check-deploy-gradle-action/issues/517)) ([9f729c7](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9f729c75bcfa4ada0758ae040b61493e438e144b))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to cb97030 ([1c6ea6b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/1c6ea6b45330605d92609401fdee9a2f80b779a2))
+* generate multi-tests ([53d5824](https://github.com/DanySK/build-check-deploy-gradle-action/commit/53d5824bde899ba83f6f3260c07dd45c7df3ed4a))
+
 ## [2.3.2](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.3.1...2.3.2) (2024-02-07)
 
 
