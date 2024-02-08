@@ -23,7 +23,7 @@ inputs:
     required: false
   retries-on-failure:
     description: 'How many times every command should be retried before giving up'
-    default: '1'
+    default: '2'
     required: false
   wait-between-retries:
     description: 'How many seconds to wait after a step failure before attempting a new run'
