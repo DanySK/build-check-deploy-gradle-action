@@ -160,7 +160,7 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
-        COMMAND='${{ inputs.pre-build-command }}'
+        echo "::group::Pre-Build"
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
           echo 'Attempt $attempt/${{ inputs.retries-on-failure}}'
           source <(<<'${{ steps.hd-id.outputs.heredoc }}'
@@ -176,7 +176,11 @@ runs:
         echo "::group::Build"
         COMMAND='${{ inputs.build-command }}'
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          $(echo $COMMAND) && break || sleep "${{ inputs.wait-between-retries }}"
+          echo 'Attempt $attempt/${{ inputs.retries-on-failure}}'
+          source <(<<'${{ steps.hd-id.outputs.heredoc }}'
+        ${{ inputs.build-command }}
+        ${{ steps.hd-id.outputs.heredoc }}
+          ) && break || sleep "${{ inputs.wait-between-retries }}"
         done
         echo "::endgroup::"
     - name: Check
