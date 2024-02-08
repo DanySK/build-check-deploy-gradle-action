@@ -188,9 +188,12 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Check"
-        COMMAND='${{ inputs.check-command }}'
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          $(echo $COMMAND) && break || sleep "${{ inputs.wait-between-retries }}"
+          echo 'Attempt $attempt/${{ inputs.retries-on-failure}}'
+          source <(<<'${{ steps.hd-id.outputs.heredoc }}'
+        ${{ inputs.check-command }}
+        ${{ steps.hd-id.outputs.heredoc }}
+          ) && break || sleep "${{ inputs.wait-between-retries }}"
         done
         echo "::endgroup::"
     - name: CodeCov
