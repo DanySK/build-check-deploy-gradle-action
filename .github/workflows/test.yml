@@ -53,7 +53,10 @@ jobs:
       - uses: ./action
         with:
           build-command: ./gradlew tasks
-          check-command: true
+          check-command: |
+            for x in 1 2 3; do
+              echo $x
+            done
           working-directory: target
           should-run-codecov: false
           clean-command: ./gradlew clean
