@@ -162,7 +162,7 @@ runs:
       run: |
         echo "::group::Pre-Build"
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          echo 'Attempt $attempt/${{ inputs.retries-on-failure}}'
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
           source <(<<'${{ steps.hd-id.outputs.heredoc }}'
         ${{ inputs.pre-build-command }}
         ${{ steps.hd-id.outputs.heredoc }}
@@ -176,7 +176,7 @@ runs:
         echo "::group::Build"
         COMMAND='${{ inputs.build-command }}'
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          echo 'Attempt $attempt/${{ inputs.retries-on-failure}}'
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
           source <(<<'${{ steps.hd-id.outputs.heredoc }}'
         ${{ inputs.build-command }}
         ${{ steps.hd-id.outputs.heredoc }}
@@ -189,7 +189,7 @@ runs:
       run: |
         echo "::group::Check"
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          echo 'Attempt $attempt/${{ inputs.retries-on-failure}}'
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
           source <(<<'${{ steps.hd-id.outputs.heredoc }}'
         ${{ inputs.check-command }}
         ${{ steps.hd-id.outputs.heredoc }}
@@ -231,7 +231,7 @@ runs:
       run: |
         echo "::group::Deploy"
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
-          echo 'Attempt $attempt/${{ inputs.retries-on-failure}}'
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
           source <(<<'${{ steps.hd-id.outputs.heredoc }}'
         ${{ inputs.deploy-command }}
         ${{ steps.hd-id.outputs.heredoc }}
