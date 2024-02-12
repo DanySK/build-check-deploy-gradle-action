@@ -35,6 +35,8 @@ jobs:
           check-command: ./gradlew check --parallel
           clean-command: 'true'
           deploy-command: ./gradlew publish --parallel
+          retries-on-failure: 2
+          wait-between-retries: 5
           gradle-termination-command: ./gradlew --stop
           java-distribution: temurin
           java-version: '17'
