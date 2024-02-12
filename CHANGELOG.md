@@ -1,3 +1,15 @@
+## [2.4.2](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.1...2.4.2) (2024-02-12)
+
+
+### Documentation
+
+* document the retry system ([665162f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/665162fa4f4f5dee68a3479144e6979176c9dfff))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 78aca5a ([038297a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/038297afaafb488071972305a32a5fa9dc1c8c86))
+
 ## [2.4.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.0...2.4.1) (2024-02-10)
 
 
