@@ -1,3 +1,15 @@
+## [2.4.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.2...2.4.3) (2024-02-23)
+
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v4.0.2 ([f1ef349](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f1ef3492480e12847a6e6e1e5d452927e52ef3bc))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 9d49195 ([b15e597](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b15e597593167832ea26b53803516a34d620fa5f))
+
 ## [2.4.2](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.1...2.4.2) (2024-02-12)
 
 
