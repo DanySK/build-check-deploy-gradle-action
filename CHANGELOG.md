@@ -1,3 +1,10 @@
+## [2.4.4](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.3...2.4.4) (2024-02-26)
+
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v4.1.0 ([4d84ec2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/4d84ec23dad07d3071fb5875bc684aa897a212ec))
+
 ## [2.4.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.2...2.4.3) (2024-02-23)
 
 
