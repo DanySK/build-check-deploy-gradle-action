@@ -126,7 +126,7 @@ runs:
       if: inputs.should-validate-wrapper == 'true'
       uses: gradle/wrapper-validation-action@v2.1.1
     - name: Setup Java
-      uses: actions/setup-java@v4.0.0
+      uses: actions/setup-java@v4.1.0
       with:
         distribution: ${{ inputs.java-distribution }}
         java-version: ${{ inputs.java-version }}
