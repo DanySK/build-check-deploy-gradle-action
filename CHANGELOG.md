@@ -1,3 +1,26 @@
+## [2.4.7](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.6...2.4.7) (2024-03-13)
+
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v4.2.0 ([917ea97](https://github.com/DanySK/build-check-deploy-gradle-action/commit/917ea97a022e7fc618ff1e3114400c64550f654b))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.2 ([da4530f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/da4530fe286e3c2e37ff2a2ab673c781da7b18fa))
+* **deps:** update danysk/template-for-gradle-plugins digest to 053d001 ([8049c81](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8049c81cd06c95a11959557d264b3d1887d08188))
+* **deps:** update danysk/template-for-gradle-plugins digest to 14c55cd ([e1b12a2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e1b12a2f0e125eb4751270dc02841f3255f405d2))
+* **deps:** update danysk/template-for-gradle-plugins digest to 2354bde ([80c207c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/80c207c4d92b7b9df1aee2bee3f631683fe0542f))
+* **deps:** update danysk/template-for-gradle-plugins digest to 67d16b7 ([3c14cd3](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3c14cd3886e640edea2d5d9508c9cb7596d35881))
+* **deps:** update danysk/template-for-gradle-plugins digest to 78b1b7f ([ce809b8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ce809b8b8c6a1e0889903cd8abb638d161754393))
+* **deps:** update danysk/template-for-gradle-plugins digest to a9a099f ([391dffe](https://github.com/DanySK/build-check-deploy-gradle-action/commit/391dffe09dbc8f5ae15df4688ec591552b32cf90))
+* **deps:** update danysk/template-for-gradle-plugins digest to bbb576c ([b6e3d28](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b6e3d2884457194c50bca46aa7d141abf65af1dd))
+* **deps:** update danysk/template-for-gradle-plugins digest to c762121 ([07d2418](https://github.com/DanySK/build-check-deploy-gradle-action/commit/07d24181de068aef488cfcd37d1c645b204e170a))
+* **deps:** update danysk/template-for-gradle-plugins digest to f00ce95 ([30be3c8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/30be3c8d628d487a69190911c671469d129ac4df))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.1.23 ([41301a6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/41301a606c4c43334fa78381c45abea50967be51))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.1.24 ([8353c09](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8353c099b2582b17abd04e9ae96fb08b9661c96f))
+
 ## [2.4.6](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.5...2.4.6) (2024-02-29)
 
 
