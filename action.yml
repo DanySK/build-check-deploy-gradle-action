@@ -142,7 +142,7 @@ runs:
       with:
         disk-root: 'C:'
     - name: Cache Gradle packages
-      uses: actions/cache@v4.0.1
+      uses: actions/cache@v4.0.2
       with:
         path: |
           ~/.gradle/caches
