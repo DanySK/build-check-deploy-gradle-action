@@ -1,3 +1,15 @@
+## [2.4.9](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.8...2.4.9) (2024-03-19)
+
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v4.0.2 ([d2e4477](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d2e4477b972f58f8594884b6e8800c00510f060a))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to a11fbc9 ([6d176cc](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6d176cc5dad17bd8f835aa82add0cb22a9b50c86))
+
 ## [2.4.8](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.7...2.4.8) (2024-03-14)
 
 
