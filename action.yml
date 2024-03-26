@@ -198,7 +198,7 @@ runs:
         echo "::endgroup::"
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
-      uses: codecov/codecov-action@v4.1.0
+      uses: codecov/codecov-action@v4.1.1
       with:
         directory: ${{ inputs.codecov-directory }}
     - name: Deploy
