@@ -1,3 +1,15 @@
+## [2.4.15](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.14...2.4.15) (2024-04-12)
+
+
+### Dependency updates
+
+* **core-deps:** update gradle/wrapper-validation-action action to v3 ([37efea3](https://github.com/DanySK/build-check-deploy-gradle-action/commit/37efea3147e80093160c4efe1beafdb3e521f56d))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to e2a7dc6 ([08d74dc](https://github.com/DanySK/build-check-deploy-gradle-action/commit/08d74dcc17d755ff4eb9209d8e554b002c4d6162))
+
 ## [2.4.14](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.13...2.4.14) (2024-04-10)
 
 
