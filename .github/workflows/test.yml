@@ -33,7 +33,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ windows-2022, macos-13, ubuntu-22.04 ]
+        os: [ windows-2022, macos-14, ubuntu-22.04 ]
         test: ${{ fromJson(needs.select-tests.outputs.tests) }}
     runs-on: ${{ matrix.os }}
     concurrency:
