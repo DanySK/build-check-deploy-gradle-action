@@ -1,3 +1,24 @@
+## [2.4.17](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.16...2.4.17) (2024-04-26)
+
+
+### Dependency updates
+
+* **core-deps:** update gradle/wrapper-validation-action action to v3.3.2 ([f4fd6f9](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f4fd6f9fc4432ea861e90167b51e776aff1ed073))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.3 ([e63d885](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e63d885ff018ff033b4e04212d9f9f6735ea9be0))
+* **deps:** update actions/checkout action to v4.1.4 ([250b409](https://github.com/DanySK/build-check-deploy-gradle-action/commit/250b409f5d41dbe0af4bbd7276c9570534e16f17))
+* **deps:** update danysk/template-for-gradle-plugins digest to 264338d ([411d532](https://github.com/DanySK/build-check-deploy-gradle-action/commit/411d532b77ae83778274b63e7ae370c33c56d4e6))
+* **deps:** update danysk/template-for-gradle-plugins digest to 73b5944 ([b6032eb](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b6032ebc938348e4405e25f66f6d9daf0c903efb))
+* **deps:** update danysk/template-for-gradle-plugins digest to 87ad30d ([030617a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/030617a98ebf767f4010f38529436c7e97f3c51e))
+* **deps:** update danysk/template-for-gradle-plugins digest to 9190529 ([70bfd8c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/70bfd8c2b86b63d053546a5213ea9eff8be0d762))
+* **deps:** update danysk/template-for-gradle-plugins digest to a38e9da ([ab5bdf2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ab5bdf255f77e3aee7578b17d450db00e9cbd51a))
+* **deps:** update danysk/template-for-gradle-plugins digest to b0599c8 ([433f7e4](https://github.com/DanySK/build-check-deploy-gradle-action/commit/433f7e47d5b69bbf3b2b001eeef1e0e311819e15))
+* **deps:** update danysk/template-for-gradle-plugins digest to e9a93aa ([df32893](https://github.com/DanySK/build-check-deploy-gradle-action/commit/df328936987e8de6a150d46a61a9713526f78db5))
+* **deps:** update dependency macos github actions runner to v14 ([142df60](https://github.com/DanySK/build-check-deploy-gradle-action/commit/142df60ca2d44be6157029e0fc982dbd9533293f))
+
 ## [2.4.16](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.15...2.4.16) (2024-04-18)
 
 
