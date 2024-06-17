@@ -1,3 +1,10 @@
+## [2.4.24](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.23...2.4.24) (2024-06-17)
+
+
+### Dependency updates
+
+* **core-deps:** update gradle/wrapper-validation-action action to v3.4.2 ([a8e8030](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a8e803012ae23e21e3c13f96cbd6540ad322b2e5))
+
 ## [2.4.23](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.22...2.4.23) (2024-06-15)
 
 
