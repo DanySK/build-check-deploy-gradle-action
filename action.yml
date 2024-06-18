@@ -63,7 +63,6 @@ inputs:
     required: false
   maven-central-username:
     description: 'Username for Maven Central that will be exposed in the deployment step as the environment variables MAVEN_CENTRAL_PASSWORD and ORG_GRADLE_PROJECT_mavenUsername'
-    default: 'danysk'
     required: false
   working-directory:
     description: 'Location where the repository should will be cloned'
