@@ -1,3 +1,14 @@
+## [3.0.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.24...3.0.0) (2024-06-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove the default value from maven-central-username
+
+### Bug Fixes
+
+* remove the default value from maven-central-username ([f7f8d12](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f7f8d12ff5dbdb8166daaa72b727198e645d9510))
+
 ## [2.4.24](https://github.com/DanySK/build-check-deploy-gradle-action/compare/2.4.23...2.4.24) (2024-06-17)
 
 
