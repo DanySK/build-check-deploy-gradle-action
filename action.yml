@@ -200,6 +200,7 @@ runs:
         done
         echo "::endgroup::"
     - name: Check codecov token
+      shell: bash
       if: inputs.should-run-codecov == 'true' && inputs.codecov-token == ''
       run: echo '::error title=Codecov enabled but no Codecov token provided::Please set the `codecov-token` input with the appropriate Codecov token'
     - name: CodeCov
