@@ -33,6 +33,9 @@ inputs:
     description: 'The location where CodeCov searches for coverage information'
     default: build
     required: false
+  codecov-token:
+    description: 'The codecov token for this repository'
+    required: true
   deploy-command:
     description: 'The condition triggering a deploy run'
     default: "./gradlew publish --parallel"
@@ -200,6 +203,7 @@ runs:
       uses: codecov/codecov-action@v4.5.0
       with:
         directory: ${{ inputs.codecov-directory }}
+        token: ${{ inputs.codecov-token }}
     - name: Deploy
       if: inputs.should-deploy == 'true'
       working-directory: ${{ inputs.working-directory }}
