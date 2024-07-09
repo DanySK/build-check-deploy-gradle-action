@@ -33,6 +33,10 @@ inputs:
     description: 'The location where CodeCov searches for coverage information'
     default: build
     required: false
+  codecov-token:
+    description: 'The codecov token for this repository'
+    default: ""
+    required: false
   deploy-command:
     description: 'The condition triggering a deploy run'
     default: "./gradlew publish --parallel"
@@ -195,11 +199,16 @@ runs:
           if [ "$attempt" = "${{ inputs.retries-on-failure}}" ]; then false; fi
         done
         echo "::endgroup::"
+    - name: Check codecov token
+      shell: bash
+      if: inputs.should-run-codecov == 'true' && inputs.codecov-token == ''
+      run: echo '::error title=Codecov enabled but no Codecov token provided::Please set the `codecov-token` input with the appropriate Codecov token'
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
       uses: codecov/codecov-action@v4.5.0
       with:
         directory: ${{ inputs.codecov-directory }}
+        token: ${{ inputs.codecov-token }}
     - name: Deploy
       if: inputs.should-deploy == 'true'
       working-directory: ${{ inputs.working-directory }}
