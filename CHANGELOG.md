@@ -1,3 +1,15 @@
+## [3.1.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.1.0...3.1.1) (2024-07-15)
+
+### Dependency updates
+
+* **core-deps:** update gradle/wrapper-validation-action action to v3.5.0 ([c085f3f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c085f3f537d1dea05ef7022d9c6db222eba00dd7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.91 ([742d21e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/742d21ec12e87683350ac4468cb4fe63e0711d5d))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 415c3c1 ([a2d8e71](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a2d8e7100960aa8c57e5766152ec8dbc088bf5c0))
+* **deps:** update danysk/template-for-gradle-plugins digest to c9dfb5b ([4df733d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/4df733d225185620988fb12058d0d3795f0627a8))
+
 ## [3.1.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.0.0...3.1.0) (2024-07-10)
 
 ### Features
