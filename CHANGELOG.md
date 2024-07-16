@@ -1,3 +1,14 @@
+## [3.2.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.1.1...3.2.0) (2024-07-16)
+
+### Features
+
+* default to Java 21 ([b1097be](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b1097bea3efdda55a869668b3d054dee5df3851a))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 0913184 ([5d78bfc](https://github.com/DanySK/build-check-deploy-gradle-action/commit/5d78bfc41c26f54c44ac0191a2118b62ade0a2e8))
+* **deps:** update danysk/template-for-gradle-plugins digest to c28a321 ([65ea061](https://github.com/DanySK/build-check-deploy-gradle-action/commit/65ea0618b1ff9243460c15f81d3181b4129571a3))
+
 ## [3.1.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.1.0...3.1.1) (2024-07-15)
 
 ### Dependency updates
