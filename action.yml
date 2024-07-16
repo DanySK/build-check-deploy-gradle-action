@@ -51,7 +51,7 @@ inputs:
     required: false
   java-version:
     description: 'The Java version to use'
-    default: "17"
+    default: "21"
     required: false
   should-run-codecov:
     description: 'True if the action should send coverage results to codecov.io'
