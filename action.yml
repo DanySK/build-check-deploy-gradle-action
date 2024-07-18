@@ -145,16 +145,9 @@ runs:
       with:
         disk-root: 'C:'
     - name: Cache Gradle packages
-      uses: actions/cache@v4.0.2
+      uses: burrunan/gradle-cache-action@v1.19
       with:
-        path: |
-          ~/.gradle/caches
-          ~/.gradle/wrapper
-          ~/.gradle/jdks
-          ~/.konan
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-        restore-keys: |
-          ${{ runner.os }}-gradle-
+        build-root-directory: ${{ inputs.working-directory }}
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
