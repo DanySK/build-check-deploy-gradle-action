@@ -1,3 +1,19 @@
+## [3.4.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.3.0...3.4.0) (2024-07-18)
+
+### Features
+
+* migrate custom caching to burrunan/gradle-cache-action ([#657](https://github.com/DanySK/build-check-deploy-gradle-action/issues/657)) ([dd7ef18](https://github.com/DanySK/build-check-deploy-gradle-action/commit/dd7ef1811c1e0a35de81cd4799d844fe492792ba))
+
+### Performance improvements
+
+* remove unused step ([#658](https://github.com/DanySK/build-check-deploy-gradle-action/issues/658)) ([1479678](https://github.com/DanySK/build-check-deploy-gradle-action/commit/14796780ab18bc86fb3b9472fdc37a8867859d8f))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 9254096 ([07818cc](https://github.com/DanySK/build-check-deploy-gradle-action/commit/07818ccb0a3fd091a101aeb93c2fa3355a210f9e))
+* **deps:** update danysk/template-for-gradle-plugins digest to bc3d4c6 ([c6c2380](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c6c23800b0248ff825466235dbf98305bc75a918))
+* **deps:** update danysk/template-for-gradle-plugins digest to d7c7436 ([9b8a838](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9b8a838db53f29a57396a93835c21fd56fa9badf))
+
 ## [3.3.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.2.0...3.3.0) (2024-07-16)
 
 ### Features
