@@ -145,16 +145,7 @@ runs:
       with:
         disk-root: 'C:'
     - name: Cache Gradle packages
-      uses: actions/cache@v4.0.2
-      with:
-        path: |
-          ~/.gradle/caches
-          ~/.gradle/wrapper
-          ~/.gradle/jdks
-          ~/.konan
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-        restore-keys: |
-          ${{ runner.os }}-gradle-
+      uses: burrunan/gradle-cache-action@v1
     - name: Compute the heredoc id
       id: hd-id
       shell: bash
