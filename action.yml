@@ -148,6 +148,13 @@ runs:
       uses: burrunan/gradle-cache-action@v1.19
       with:
         build-root-directory: ${{ inputs.working-directory }}
+    - name: Cache Konan native Kotlin compiler
+      uses: actions/cache@v4.0.2
+      with:
+        path: "~/.konan"
+        key: ${{ runner.os }}-konan-${{ hashFiles('**/gradle/**.versions.toml', '**/**.gradle.kts') }}
+        restore-keys: |
+          ${{ runner.os }}-konan-
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
