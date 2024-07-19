@@ -1,3 +1,15 @@
+## [3.5.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.4.0...3.5.0) (2024-07-19)
+
+### Features
+
+* cache ~.konan ([#662](https://github.com/DanySK/build-check-deploy-gradle-action/issues/662)) ([d7a48dc](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d7a48dc2d51c3a160f26d13d84ef6e03d999dae4))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 6b99c7e ([b027d7a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b027d7a3c7a2b0075bfed410e69a25e366c43c63))
+* **deps:** update danysk/template-for-gradle-plugins digest to 76749e6 ([4ac8eb8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/4ac8eb88647301e0c8a3b195d241631286f06fcb))
+* **deps:** update danysk/template-for-gradle-plugins digest to e9d248c ([9ea0ac1](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9ea0ac1ccce2326a8a26ecc36c25b9eecef8ed24))
+
 ## [3.4.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.3.0...3.4.0) (2024-07-18)
 
 ### Features
