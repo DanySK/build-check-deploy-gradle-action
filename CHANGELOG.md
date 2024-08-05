@@ -1,3 +1,17 @@
+## [3.5.2](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.1...3.5.2) (2024-08-05)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v4.2.2 ([5a47170](https://github.com/DanySK/build-check-deploy-gradle-action/commit/5a47170a4b5a2ef5180d513e62a94a9281890d2d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.94 ([80b101a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/80b101acccb557c5267273eae7caddaf9417d4ea))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.95 ([48bd8ad](https://github.com/DanySK/build-check-deploy-gradle-action/commit/48bd8ad9bc82a7be8d91d944ec84c75b2d69ebb8))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 3c2def6 ([96dc79c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/96dc79cb8435e946fac7c2de3f60abe60d06ac48))
+* **deps:** update danysk/template-for-gradle-plugins digest to 9596e6b ([f735a8c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f735a8ce9f643e7e4ed5b8204136f49c5b94befc))
+* **deps:** update danysk/template-for-gradle-plugins digest to b4fcf3c ([b3805b7](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b3805b796284a7bb88c37a3b17a7007a2e5b2368))
+
 ## [3.5.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.0...3.5.1) (2024-07-31)
 
 ### Dependency updates
