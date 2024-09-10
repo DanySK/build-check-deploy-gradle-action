@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: |
           USES=$(cat <<TRICK_RENOVATE
-          - uses: DanySK/Template-for-Gradle-Plugins@8307079cb51f8ee595add36a8aa8ce9f2a57130f
+          - uses: DanySK/Template-for-Gradle-Plugins@09fe3a4c4215c78d527de2ce63b653b3256a670c
           - uses: DanySK/Template-for-Kotlin-Multiplatform-Projects@0.2.1
           TRICK_RENOVATE
           )
