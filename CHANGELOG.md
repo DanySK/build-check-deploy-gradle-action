@@ -1,3 +1,21 @@
+## [3.5.8](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.7...3.5.8) (2024-10-01)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v4.6.0 ([b5fb4aa](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b5fb4aab3a1d3b58cdb0bc1462f74b7d6a4f284a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.108 ([1db1364](https://github.com/DanySK/build-check-deploy-gradle-action/commit/1db13644078ba6d774090e5cb335e76e85e0e954))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.109 ([bccf6df](https://github.com/DanySK/build-check-deploy-gradle-action/commit/bccf6df8c5217e45a69647ab83c019accb3c2779))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.2.0 ([3668d34](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3668d3407f1a9316313fe54f4761b819521802c2))
+* **deps:** update danysk/template-for-gradle-plugins digest to 13f724f ([92088e0](https://github.com/DanySK/build-check-deploy-gradle-action/commit/92088e01686f3767ccd7118cdf1acde5a888727b))
+* **deps:** update danysk/template-for-gradle-plugins digest to 33481b3 ([f9f8d16](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f9f8d16464cdc77e5eb8f60565af18bef7f3dfe4))
+* **deps:** update danysk/template-for-gradle-plugins digest to 90cf19a ([69489f0](https://github.com/DanySK/build-check-deploy-gradle-action/commit/69489f06a60e541f203a221a375575d8c3d6b2ac))
+* **deps:** update danysk/template-for-gradle-plugins digest to b981546 ([d3e2e43](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d3e2e43503e258be4c180521dbd0813b519a377c))
+* **deps:** update danysk/template-for-gradle-plugins digest to efd6514 ([a37818b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a37818b504e076df2fcfc4d78c6df25e7e7be23b))
+* **deps:** update dependency ubuntu github actions runner to v24 ([92a679f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/92a679f9489538a9ffd43e7aad13fab417f314c5))
+
 ## [3.5.7](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.6...3.5.7) (2024-09-24)
 
 ### Dependency updates
