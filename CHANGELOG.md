@@ -1,3 +1,25 @@
+## [3.5.13](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.12...3.5.13) (2024-11-12)
+
+### Dependency updates
+
+* **core-deps:** update gradle/actions action to v4.2.0 ([#788](https://github.com/DanySK/build-check-deploy-gradle-action/issues/788)) ([c3243a4](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c3243a4eeb2fee92e1bbbaeee02cf96fcccfdd7c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.112 ([2689338](https://github.com/DanySK/build-check-deploy-gradle-action/commit/2689338394d631959275bb5be862994f4191fab6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.113 ([747436d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/747436d870ed39e28c2a369c80dd3ab91bb08c87))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.114 ([58db068](https://github.com/DanySK/build-check-deploy-gradle-action/commit/58db068f4e0ce212e2dea4b37383ac0eea5296f9))
+* **deps:** update node.js to v22 ([7801347](https://github.com/DanySK/build-check-deploy-gradle-action/commit/78013479ae8e34d4ba62fd512aeb203f9600eeea))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 1d821c8 ([#786](https://github.com/DanySK/build-check-deploy-gradle-action/issues/786)) ([2a57f54](https://github.com/DanySK/build-check-deploy-gradle-action/commit/2a57f54c69c9cb5cc64aad26f5cd2a66a9e6ece3))
+* **deps:** update danysk/template-for-gradle-plugins digest to 242fef6 ([35d7439](https://github.com/DanySK/build-check-deploy-gradle-action/commit/35d7439c72c9328fcfaaefa96c43187785e180ae))
+* **deps:** update danysk/template-for-gradle-plugins digest to 4068d1a ([3383281](https://github.com/DanySK/build-check-deploy-gradle-action/commit/33832811a003fd9e1c49c2565c61373f25d5f96c))
+* **deps:** update danysk/template-for-gradle-plugins digest to 6ac8eca ([42293c6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/42293c68b851e47e202e40a43f957289d0df52c4))
+* **deps:** update danysk/template-for-gradle-plugins digest to b6a2344 ([7b2fdc5](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7b2fdc588a1189e05cca7e5c62c223071ee29a4b))
+* **deps:** update danysk/template-for-gradle-plugins digest to ba9c3e1 ([#785](https://github.com/DanySK/build-check-deploy-gradle-action/issues/785)) ([7b51ee4](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7b51ee44ee60e10908e2df6cb2c4855bdca28171))
+* **deps:** update danysk/template-for-gradle-plugins digest to ccffa53 ([#787](https://github.com/DanySK/build-check-deploy-gradle-action/issues/787)) ([51246ed](https://github.com/DanySK/build-check-deploy-gradle-action/commit/51246ed353bef3308f105128ac94c4aeb435bf88))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.2.2 ([543b322](https://github.com/DanySK/build-check-deploy-gradle-action/commit/543b322e003f4cca5c294987bb4514cb55cc89f5))
+* **renovate:**  use `with` when instead of `assert` ([#784](https://github.com/DanySK/build-check-deploy-gradle-action/issues/784)) ([5cc3dd5](https://github.com/DanySK/build-check-deploy-gradle-action/commit/5cc3dd532b8222b844b4118eff6ca9380edf03ee))
+
 ## [3.5.12](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.11...3.5.12) (2024-10-24)
 
 ### Dependency updates
