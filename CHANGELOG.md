@@ -1,3 +1,18 @@
+## [3.5.14](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.13...3.5.14) (2024-11-13)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.115 ([#790](https://github.com/DanySK/build-check-deploy-gradle-action/issues/790)) ([9f77b2b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9f77b2b8bf8bff186fc9638a3cf891b100f30223))
+
+### Documentation
+
+* add example about multi-line commands ([#792](https://github.com/DanySK/build-check-deploy-gradle-action/issues/792)) ([6b56d6c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6b56d6c7f656bee7303d9da589742e73b8edb395))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 9dd33da ([#789](https://github.com/DanySK/build-check-deploy-gradle-action/issues/789)) ([6aa728b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6aa728b1ef74e9a97e5724f4d1fa007e879d46ce))
+* **deps:** update danysk/template-for-gradle-plugins digest to ec8ab6a ([#791](https://github.com/DanySK/build-check-deploy-gradle-action/issues/791)) ([3ab227b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3ab227badb3176be9dc771bea80eed2285f18165))
+
 ## [3.5.13](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.12...3.5.13) (2024-11-12)
 
 ### Dependency updates
