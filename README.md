@@ -17,6 +17,20 @@ The workflow is the following:
 0. Force kill remaining daemons
 0. Cleanup the Gradle cache
 
+## ⚠️ Multi-line commands
+
+When using multi-line commands, note that if no proper command concatenation is performed, only the last command exit code will be considered when evaluating if a retry should be performed.
+It is strongly suggested to concatenate with `&&` multiple commands:
+
+```yaml
+with:
+  build-command: |
+    ./gradlew assemble --parallel &&
+    ./gradlew --stop
+```
+
+In this way, if a command along the command chain fails, the entire block of commands fails as well.
+
 ## Example
 
 In the following examples, all values but secrets are set to their default. If you are fine with the default value, just omit the parameter.
