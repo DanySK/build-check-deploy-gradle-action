@@ -29,7 +29,7 @@ with:
     ./gradlew --stop
 ```
 
-In this way, if a command along the command chain fails, the entire block of commands fails as well.
+This way, if a command along the chain fails, the entire command block will also fail.
 
 ## Example
 
