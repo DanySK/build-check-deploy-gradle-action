@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: |
           USES=$(cat <<TRICK_RENOVATE
-          - uses: DanySK/Template-for-Gradle-Plugins@8b811d4256990660998076ca8023d300fc594524
+          - uses: DanySK/Template-for-Gradle-Plugins@2.0.18
           - uses: DanySK/Template-for-Kotlin-Multiplatform-Projects@0.2.2
           TRICK_RENOVATE
           )
@@ -45,7 +45,7 @@ jobs:
         with:
           path: 'action'
       - name: Checkout test repo
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@v4.2.2
         with:
           repository: ${{ matrix.test[0] }}
           path: 'target'
@@ -71,7 +71,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@v4.2.2
         with:
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Install Node
