@@ -1,3 +1,19 @@
+## [3.5.24](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.23...3.5.24) (2024-12-06)
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v4.2.0 ([#818](https://github.com/DanySK/build-check-deploy-gradle-action/issues/818)) ([44b3769](https://github.com/DanySK/build-check-deploy-gradle-action/commit/44b3769cdbe485e15d53e65708a12c02707dd17b))
+* **deps:** update node.js to 22.12 ([#816](https://github.com/DanySK/build-check-deploy-gradle-action/issues/816)) ([bc5ab90](https://github.com/DanySK/build-check-deploy-gradle-action/commit/bc5ab907c226c525b5a4e6be713949a3aa5663e1))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins digest to 1145fc7 ([#814](https://github.com/DanySK/build-check-deploy-gradle-action/issues/814)) ([7e39a95](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7e39a950be80976003eb29b8199cd16cd1fdc5b6))
+* **deps:** update danysk/template-for-gradle-plugins digest to 2577039 ([#812](https://github.com/DanySK/build-check-deploy-gradle-action/issues/812)) ([bcb3b56](https://github.com/DanySK/build-check-deploy-gradle-action/commit/bcb3b56392a2fc124402ca8c5566c24428ad0b89))
+* **deps:** update danysk/template-for-gradle-plugins digest to 70611fb ([#811](https://github.com/DanySK/build-check-deploy-gradle-action/issues/811)) ([88fa741](https://github.com/DanySK/build-check-deploy-gradle-action/commit/88fa74119be544bab7156b13b15cc2e7641fa181))
+* **deps:** update danysk/template-for-gradle-plugins digest to 8b811d4 ([#815](https://github.com/DanySK/build-check-deploy-gradle-action/issues/815)) ([c0efe6e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c0efe6edce6098c62f8a88df06bbd022c73d2f49))
+* **deps:** update danysk/template-for-gradle-plugins digest to fb53c06 ([#813](https://github.com/DanySK/build-check-deploy-gradle-action/issues/813)) ([e7e14b2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e7e14b2867b9adf6dddce54c8995bb9229c6d33b))
+* pin the versions on tags ([#820](https://github.com/DanySK/build-check-deploy-gradle-action/issues/820)) ([3738ba5](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3738ba587cbdc237863d677be72aef72bfe7bc70))
+
 ## [3.5.23](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.22...3.5.23) (2024-11-21)
 
 ### Dependency updates
