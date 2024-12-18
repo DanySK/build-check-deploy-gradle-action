@@ -127,7 +127,7 @@ runs:
   steps:
     - name: Validate the Gradle Wrapper
       if: inputs.should-validate-wrapper == 'true'
-      uses: gradle/actions/wrapper-validation@v4.2.1
+      uses: gradle/actions/wrapper-validation@v4.2.2
     - name: Setup Java
       uses: actions/setup-java@v4.5.0
       with:
