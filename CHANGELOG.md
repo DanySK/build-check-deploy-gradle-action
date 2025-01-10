@@ -1,3 +1,9 @@
+## [3.7.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.6.0...3.7.0) (2025-01-10)
+
+### Features
+
+* add complete support for multi-line scripts ([#834](https://github.com/DanySK/build-check-deploy-gradle-action/issues/834)) ([0f7af7f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/0f7af7fcc591fc4545e37c10d910833b9aa0d799))
+
 ## [3.6.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.28...3.6.0) (2025-01-10)
 
 ### Features
