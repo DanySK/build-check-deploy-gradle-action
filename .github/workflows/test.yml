@@ -82,7 +82,9 @@ jobs:
           ATTEMPT: "0"
         with:
           build-command: |
+            ATTEMPT=$( [ -f just-false ] && cat just-false || echo "0" )
             ATTEMPT=$((ATTEMPT + 1))
+            echo "Attempt: $ATTEMPT"
             echo "$ATTEMPT" > just-false
             false
           check-command: true
@@ -92,11 +94,11 @@ jobs:
       - uses: ./action
         continue-on-error: true
         id: false-true
-        env:
-          ATTEMPT: "0"
         with:
           build-command: |
+            ATTEMPT=$( [ -f false-true ] && cat false-true || echo "0" )
             ATTEMPT=$((ATTEMPT + 1))
+            echo "Attempt: $ATTEMPT"
             echo "$ATTEMPT" > false-true
             false
             true
