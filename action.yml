@@ -161,45 +161,74 @@ runs:
         key: ${{ runner.os }}-konan-${{ hashFiles('**/gradle/**.versions.toml', '**/**.gradle.kts') }}
         restore-keys: |
           ${{ runner.os }}-konan-
+    - name: UUID generation
+      shell: bash
+      id: uuid
+      run: echo "uuid=$(uuidgen)" >> $GITHUB_OUTPUT
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: |
         echo "::group::Pre-Build"
+        # Strategy: create a file containing the step and prefixed with set -e
+
+        # This is the file header
+        echo "#!/bin/bash" > .${{ steps.uuid.outputs.uuid }}.sh
+        echo "set -e" >> .${{ steps.uuid.outputs.uuid }}.sh
+
+        # The file content is taken from the inputs. Note the single-quoted here-doc.
+        cat <<'${{ steps.uuid.outputs.uuid }}' >> .${{ steps.uuid.outputs.uuid }}.sh
+        ${{ inputs.pre-build-command }}
+        ${{ steps.uuid.outputs.uuid }}
+
+        # Make the file executable
+        chmod +x .${{ steps.uuid.outputs.uuid }}.sh
+
+        # Retry the command as needed
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
           echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
-          {
-            ${{ inputs.pre-build-command }}
-          } && break || sleep "${{ inputs.wait-between-retries }}"
+          bash .${{ steps.uuid.outputs.uuid }}.sh && break || sleep "${{ inputs.wait-between-retries }}"
           if [ "$attempt" = "${{ inputs.retries-on-failure}}" ]; then false; fi
         done
+
+        # Cleanup
+        rm .${{ steps.uuid.outputs.uuid }}.sh
         echo "::endgroup::"
     - name: Build
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Build"
-        COMMAND='${{ inputs.build-command }}'
+        echo "#!/bin/bash" > .${{ steps.uuid.outputs.uuid }}.sh
+        echo "set -e" >> .${{ steps.uuid.outputs.uuid }}.sh
+        cat <<'${{ steps.uuid.outputs.uuid }}' >> .${{ steps.uuid.outputs.uuid }}.sh
+        ${{ inputs.build-command }}
+        ${{ steps.uuid.outputs.uuid }}
+        chmod +x .${{ steps.uuid.outputs.uuid }}.sh
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
           echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
-          {
-            ${{ inputs.build-command }}
-          } && break || sleep "${{ inputs.wait-between-retries }}"
+          bash .${{ steps.uuid.outputs.uuid }}.sh && break || sleep "${{ inputs.wait-between-retries }}"
           if [ "$attempt" = "${{ inputs.retries-on-failure}}" ]; then false; fi
         done
+        rm .${{ steps.uuid.outputs.uuid }}.sh
         echo "::endgroup::"
     - name: Check
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: |
         echo "::group::Check"
+        echo "#!/bin/bash" > .${{ steps.uuid.outputs.uuid }}.sh
+        echo "set -e" >> .${{ steps.uuid.outputs.uuid }}.sh
+        cat <<'${{ steps.uuid.outputs.uuid }}' >> .${{ steps.uuid.outputs.uuid }}.sh
+        ${{ inputs.check-command }}
+        ${{ steps.uuid.outputs.uuid }}
+        chmod +x .${{ steps.uuid.outputs.uuid }}.sh
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
           echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
-          {
-            ${{ inputs.check-command }}
-          } && break || sleep "${{ inputs.wait-between-retries }}"
+          bash .${{ steps.uuid.outputs.uuid }}.sh && break || sleep "${{ inputs.wait-between-retries }}"
           if [ "$attempt" = "${{ inputs.retries-on-failure}}" ]; then false; fi
         done
+        rm .${{ steps.uuid.outputs.uuid }}.sh
         echo "::endgroup::"
     - name: Check codecov token
       shell: bash
@@ -240,13 +269,18 @@ runs:
         ORG_GRADLE_PROJECT_npmToken: ${{ inputs.npm-token }}
       run: |
         echo "::group::Deploy"
+        echo "#!/bin/bash" > .${{ steps.uuid.outputs.uuid }}.sh
+        echo "set -e" >> .${{ steps.uuid.outputs.uuid }}.sh
+        cat <<'${{ steps.uuid.outputs.uuid }}' >> .${{ steps.uuid.outputs.uuid }}.sh
+        ${{ inputs.deploy-command }}
+        ${{ steps.uuid.outputs.uuid }}
+        chmod +x .${{ steps.uuid.outputs.uuid }}.sh
         for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
           echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
-          {
-            ${{ inputs.deploy-command }}
-          } && break || sleep "${{ inputs.wait-between-retries }}"
+          bash .${{ steps.uuid.outputs.uuid }}.sh && break || sleep "${{ inputs.wait-between-retries }}"
           if [ "$attempt" = "${{ inputs.retries-on-failure}}" ]; then false; fi
         done
+        rm .${{ steps.uuid.outputs.uuid }}.sh
         echo "::endgroup::"
     - name: Cleanup
       working-directory: ${{ inputs.working-directory }}
