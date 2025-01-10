@@ -64,10 +64,64 @@ jobs:
         with:
           working-directory: target
           should-run-codecov: false
+  failure-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout the Gradle wrapper
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: DanySK/gradle-wrapper
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          path: 'action'
+      - uses: ./action
+        id: just-false
+        continue-on-error: true
+        env:
+          ATTEMPT: "0"
+        with:
+          build-command: |
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "$ATTEMPT" > just-false
+            false
+          check-command: true
+          should-validate-wrapper: false
+          enable-cache: false
+          should-run-codecov: false
+      - uses: ./action
+        continue-on-error: true
+        id: false-true
+        env:
+          ATTEMPT: "0"
+        with:
+          build-command: |
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "$ATTEMPT" > false-true
+            false
+            true
+          check-command: true
+          should-validate-wrapper: false
+          enable-cache: false
+          should-run-codecov: false
+      - name: Result
+        if: always()
+        run: |
+          [ '${{ steps.just-false.outcome}}' = 'failure' ]
+          echo "just-false failed successfully"
+          echo "It ran for $(cat just-false) attempts, they should be 2"
+          [ "$(cat just-false)" = '2' ]
+          echo "they are."
+          [ '${{ steps.false-true.outcome}}' = 'failure' ]
+          echo "false-true failed successfully"
+          echo "It ran for $(cat false-true) attempts, they should be 2"
+          [ "$(cat false-true)" = '2' ]
+          echo "they are."
   release:
     if: github.event_name == 'push'
     needs:
       - test
+      - failure-tests
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
