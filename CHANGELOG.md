@@ -1,3 +1,21 @@
+## [3.6.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.28...3.6.0) (2025-01-10)
+
+### Features
+
+* add input to enable caching ([95faf82](https://github.com/DanySK/build-check-deploy-gradle-action/commit/95faf826c2d9cc01e1e3dc2a18b05202220f8e7b))
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.117 ([#829](https://github.com/DanySK/build-check-deploy-gradle-action/issues/829)) ([f03e440](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f03e440620427bd4cc1bf6a2343fdcf31ace1d99))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([#833](https://github.com/DanySK/build-check-deploy-gradle-action/issues/833)) ([dfe785f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/dfe785faa59cc7247b5a83f8dd0d1236e09a0232))
+* **deps:** update node.js to 22.13 ([#832](https://github.com/DanySK/build-check-deploy-gradle-action/issues/832)) ([ecfe10a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ecfe10afe37cb585e4fc53465d2123f0bd376645))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.21 ([#828](https://github.com/DanySK/build-check-deploy-gradle-action/issues/828)) ([91b356b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/91b356b2f66af372989f408fec982fe6eb006031))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.2.4 ([#830](https://github.com/DanySK/build-check-deploy-gradle-action/issues/830)) ([d53525f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d53525fe79aa29253561c1a8828c14e23df8b455))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.2.6 ([#831](https://github.com/DanySK/build-check-deploy-gradle-action/issues/831)) ([a5c3f4a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a5c3f4a84e836f3793785c3689a9f61bddab9952))
+
 ## [3.5.28](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.5.27...3.5.28) (2024-12-18)
 
 ### Dependency updates
