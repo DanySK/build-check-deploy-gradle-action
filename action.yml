@@ -162,9 +162,8 @@ runs:
         restore-keys: |
           ${{ runner.os }}-konan-
     - name: UUID generation
-      shell: bash
       id: uuid
-      run: echo "uuid=$(uuidgen)" >> $GITHUB_OUTPUT
+      uses: filipstefansson/uuid-action@v1.1
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
