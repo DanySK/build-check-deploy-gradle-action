@@ -1,3 +1,13 @@
+## [3.7.4](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.3...3.7.4) (2025-01-25)
+
+### Bug Fixes
+
+* **windows:** use a third-party action to generate a uuid ([#840](https://github.com/DanySK/build-check-deploy-gradle-action/issues/840)) ([aa70293](https://github.com/DanySK/build-check-deploy-gradle-action/commit/aa702938ba2a7944033d95500aca23c5a1789a2a))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.22 ([#839](https://github.com/DanySK/build-check-deploy-gradle-action/issues/839)) ([a6ddf47](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a6ddf477482e0c3ce3e1505a48b5972c59be147c))
+
 ## [3.7.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.2...3.7.3) (2025-01-24)
 
 ### Dependency updates
