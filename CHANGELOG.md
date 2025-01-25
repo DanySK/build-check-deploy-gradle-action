@@ -1,3 +1,9 @@
+## [3.7.5](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.4...3.7.5) (2025-01-25)
+
+### Dependency updates
+
+* **core-deps:** update danysk/uuid-action action to v1.0.3 ([#841](https://github.com/DanySK/build-check-deploy-gradle-action/issues/841)) ([bac84b4](https://github.com/DanySK/build-check-deploy-gradle-action/commit/bac84b4428743610f9ea537fa6cf74a40d8bbdab))
+
 ## [3.7.4](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.3...3.7.4) (2025-01-25)
 
 ### Bug Fixes
