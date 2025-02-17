@@ -43,7 +43,7 @@ jobs:
           java-version: '17'
           should-run-codecov: true
           should-deploy: false
-          maven-central-username: 'danysk'
+          maven-central-username: ''
           maven-central-password:
           maven-central-repo: 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
           working-directory: '.'
