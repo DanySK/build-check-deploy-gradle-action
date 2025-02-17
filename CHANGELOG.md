@@ -1,3 +1,18 @@
+## [3.7.9](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.8...3.7.9) (2025-02-17)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.120 ([#849](https://github.com/DanySK/build-check-deploy-gradle-action/issues/849)) ([5020114](https://github.com/DanySK/build-check-deploy-gradle-action/commit/5020114d9470b13c03333c62397ddc44483b1546))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.121 ([#850](https://github.com/DanySK/build-check-deploy-gradle-action/issues/850)) ([f8902db](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f8902db00512dc7d849579e34aebe4cf23b95985))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.122 ([#851](https://github.com/DanySK/build-check-deploy-gradle-action/issues/851)) ([cff15af](https://github.com/DanySK/build-check-deploy-gradle-action/commit/cff15af8b9358036ce4cb92982baf34e0d3e07ea))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.123 ([#853](https://github.com/DanySK/build-check-deploy-gradle-action/issues/853)) ([22608be](https://github.com/DanySK/build-check-deploy-gradle-action/commit/22608be934da81516b6c668648e49e91d96111fb))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.124 ([#854](https://github.com/DanySK/build-check-deploy-gradle-action/issues/854)) ([6cc783d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6cc783dc858e1fa6f349b562b2c33b53e49e031b))
+* **deps:** update node.js to 22.14 ([#852](https://github.com/DanySK/build-check-deploy-gradle-action/issues/852)) ([7cc5bb8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7cc5bb8c6de1b190fc9940c75b6233e475b5ec28))
+
+### Documentation
+
+* update the readme specifying the correct default for the Maven Central username ([7f55da1](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7f55da1cbaf6f50d6c00b8ad2ff569bd013b8eb5))
+
 ## [3.7.8](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.7...3.7.8) (2025-01-30)
 
 ### Dependency updates
