@@ -155,7 +155,7 @@ runs:
         build-root-directory: ${{ inputs.working-directory }}
     - name: Cache Konan native Kotlin compiler
       if: inputs.enable-cache == 'true'
-      uses: actions/cache@v4.2.1
+      uses: actions/cache@v4.2.2
       with:
         path: "~/.konan"
         key: ${{ runner.os }}-konan-${{ hashFiles('**/gradle/**.versions.toml', '**/**.gradle.kts') }}
