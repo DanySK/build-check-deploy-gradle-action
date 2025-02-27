@@ -1,3 +1,14 @@
+## [3.7.11](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.10...3.7.11) (2025-02-27)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.4.0 ([#858](https://github.com/DanySK/build-check-deploy-gradle-action/issues/858)) ([e6d0a43](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e6d0a4358af3f5da1b025722f0ba5bd63f57e2dd))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.125 ([#856](https://github.com/DanySK/build-check-deploy-gradle-action/issues/856)) ([fd8335e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/fd8335e28fc161ec46ad83ee908e43ea80195d01))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.24 ([#857](https://github.com/DanySK/build-check-deploy-gradle-action/issues/857)) ([fd7eb50](https://github.com/DanySK/build-check-deploy-gradle-action/commit/fd7eb50298df6793591f202b36c63b6d9af02119))
+
 ## [3.7.10](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.9...3.7.10) (2025-02-19)
 
 ### Dependency updates
