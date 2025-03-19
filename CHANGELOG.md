@@ -1,3 +1,13 @@
+## [3.7.13](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.12...3.7.13) (2025-03-19)
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v4.2.3 ([#861](https://github.com/DanySK/build-check-deploy-gradle-action/issues/861)) ([1b350fd](https://github.com/DanySK/build-check-deploy-gradle-action/commit/1b350fd87f41d49c9da536065edbab822098d81c))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.3.0 ([#860](https://github.com/DanySK/build-check-deploy-gradle-action/issues/860)) ([48d4f05](https://github.com/DanySK/build-check-deploy-gradle-action/commit/48d4f054507f338c0b3f3b44db43266b15393541))
+
 ## [3.7.12](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.11...3.7.12) (2025-02-27)
 
 ### Dependency updates
