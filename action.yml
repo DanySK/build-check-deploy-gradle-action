@@ -296,7 +296,7 @@ runs:
       if: ${{ runner.os == 'Windows' }}
       shell: powershell
       run: |
-        WMIC PROCESS where "Name like 'java%' AND CommandLine like '%GradleDaemon%'" Call Terminate
+        Get-Process java | Where-Object { $_.CommandLine -like "*GradleDaemon*" } | Stop-Process
     - name: Cleanup the Gradle cache
       if: ${{ runner.os != 'Windows' }}
       shell: bash
