@@ -1,3 +1,13 @@
+## [3.7.15](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.14...3.7.15) (2025-04-09)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v4.7.1 ([#865](https://github.com/DanySK/build-check-deploy-gradle-action/issues/865)) ([71efc4a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/71efc4ab23af0c28824793f94b8a730d747fe494))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.2.8 ([#864](https://github.com/DanySK/build-check-deploy-gradle-action/issues/864)) ([fe678df](https://github.com/DanySK/build-check-deploy-gradle-action/commit/fe678df88df3a55efcb88478e9d88b41195f071b))
+
 ## [3.7.14](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.13...3.7.14) (2025-03-26)
 
 ### Dependency updates
