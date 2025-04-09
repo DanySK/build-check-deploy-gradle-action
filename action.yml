@@ -296,7 +296,20 @@ runs:
       if: ${{ runner.os == 'Windows' }}
       shell: powershell
       run: |
-        WMIC PROCESS where "Name like 'java%' AND CommandLine like '%GradleDaemon%'" Call Terminate
+        try {
+            $gradleProcesses = Get-Process java -ErrorAction Stop | Where-Object { $_.CommandLine -like "*GradleDaemon*" }
+            if ($gradleProcesses) {
+                Stop-Process -InputObject $gradleProcesses -ErrorAction SilentlyContinue
+                Write-Host "Gradle Daemon processes have been stopped."
+            } 
+            else {
+                Write-Host "No Gradle Daemon processes found."
+            }
+        }
+        catch {
+            Write-Host "No Java processes found. Nothing to terminate."
+        }
+
     - name: Cleanup the Gradle cache
       if: ${{ runner.os != 'Windows' }}
       shell: bash
