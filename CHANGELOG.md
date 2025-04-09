@@ -1,3 +1,9 @@
+## [3.7.16](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.15...3.7.16) (2025-04-09)
+
+### Bug Fixes
+
+* **windows:** replace `WMIC` with `Get-Process` ([#867](https://github.com/DanySK/build-check-deploy-gradle-action/issues/867)) ([5025665](https://github.com/DanySK/build-check-deploy-gradle-action/commit/5025665312a393706b43c361cd6fd826cbdd5cf2))
+
 ## [3.7.15](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.14...3.7.15) (2025-04-09)
 
 ### Dependency updates
