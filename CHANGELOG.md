@@ -1,3 +1,14 @@
+## [3.7.17](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.16...3.7.17) (2025-04-14)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.4.2 ([#869](https://github.com/DanySK/build-check-deploy-gradle-action/issues/869)) ([521e64f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/521e64f60368cbc9495897006ddc5a13c535c4a4))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.4.0 ([#868](https://github.com/DanySK/build-check-deploy-gradle-action/issues/868)) ([1694962](https://github.com/DanySK/build-check-deploy-gradle-action/commit/1694962f5b08c871f42f95ad23f4f4f42bcb1865))
+* **deps:** update dependency windows github actions runner to v2025 ([#866](https://github.com/DanySK/build-check-deploy-gradle-action/issues/866)) ([3a89aae](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3a89aaeae1fe795dc4ef0a98ad401071ef1beb26))
+
 ## [3.7.16](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.15...3.7.16) (2025-04-09)
 
 ### Bug Fixes
