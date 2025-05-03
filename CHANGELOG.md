@@ -1,3 +1,16 @@
+## [3.7.18](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.17...3.7.18) (2025-05-03)
+
+### Dependency updates
+
+* **core-deps:** update burrunan/gradle-cache-action action to v3 ([#874](https://github.com/DanySK/build-check-deploy-gradle-action/issues/874)) ([a8bfe9a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a8bfe9a4b29e6c3b0e10afa36dd5878ec641fa5d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.126 ([#872](https://github.com/DanySK/build-check-deploy-gradle-action/issues/872)) ([6efbe9c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6efbe9ce88e4db91064b9fb71c28d33907720d08))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.127 ([#873](https://github.com/DanySK/build-check-deploy-gradle-action/issues/873)) ([2033ee6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/2033ee6cabba1a4456367b4010e0069e0faa689b))
+* **deps:** update node.js to 22.15 ([#870](https://github.com/DanySK/build-check-deploy-gradle-action/issues/870)) ([6bfa30c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/6bfa30cec7719d343270d6043799232dbb4f3eac))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.26 ([#871](https://github.com/DanySK/build-check-deploy-gradle-action/issues/871)) ([206179b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/206179b272c2ec6d66eb41dfe7382c7be02d6c4d))
+
 ## [3.7.17](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.16...3.7.17) (2025-04-14)
 
 ### Dependency updates
