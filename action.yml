@@ -150,7 +150,7 @@ runs:
         disk-root: 'C:'
     - name: Cache Gradle packages
       if: inputs.enable-cache == 'true'
-      uses: burrunan/gradle-cache-action@v1.22
+      uses: burrunan/gradle-cache-action@v3.0
       with:
         build-root-directory: ${{ inputs.working-directory }}
     - name: Cache Konan native Kotlin compiler
