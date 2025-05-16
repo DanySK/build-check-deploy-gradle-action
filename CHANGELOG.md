@@ -1,3 +1,10 @@
+## [3.7.20](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.19...3.7.20) (2025-05-16)
+
+### Dependency updates
+
+* **core-deps:** update gradle/actions action to v4.4.0 ([#879](https://github.com/DanySK/build-check-deploy-gradle-action/issues/879)) ([36e00db](https://github.com/DanySK/build-check-deploy-gradle-action/commit/36e00db811f07baaf3cf107e2c53a92153faf6a0))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.128 ([#878](https://github.com/DanySK/build-check-deploy-gradle-action/issues/878)) ([83f1b7a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/83f1b7a3112fc00299060b4fb5c084cc012b53dc))
+
 ## [3.7.19](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.18...3.7.19) (2025-05-15)
 
 ### Dependency updates
