@@ -1,3 +1,9 @@
+## [4.0.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.0...4.0.1) (2025-06-12)
+
+### Dependency updates
+
+* **core-deps:** update gradle/actions action to v4.4.1 ([#888](https://github.com/DanySK/build-check-deploy-gradle-action/issues/888)) ([e225844](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e225844ebf30ecc9077c989e55359345f0475ccb))
+
 ## [4.0.0](https://github.com/DanySK/build-check-deploy-gradle-action/compare/3.7.20...4.0.0) (2025-06-11)
 
 ### ⚠ BREAKING CHANGES
