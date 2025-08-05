@@ -1,3 +1,24 @@
+## [4.0.2](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.1...4.0.2) (2025-08-05)
+
+### Dependency updates
+
+* **core-deps:** update gradle/actions action to v4.4.2 ([#901](https://github.com/DanySK/build-check-deploy-gradle-action/issues/901)) ([3c4cfe6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3c4cfe6707a2201e663778c91a238c6a09b009c6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.134 ([#893](https://github.com/DanySK/build-check-deploy-gradle-action/issues/893)) ([3c161c2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3c161c20e631b3b2cdd35cd883d88b2fc57b6cff))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.135 ([#894](https://github.com/DanySK/build-check-deploy-gradle-action/issues/894)) ([a92e2d2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a92e2d23895d05d108b105d2aa448d4c54bdbc31))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.136 ([#896](https://github.com/DanySK/build-check-deploy-gradle-action/issues/896)) ([d070f2e](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d070f2e602c1df55f9ce72e5eeda12f195f28375))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.137 ([#898](https://github.com/DanySK/build-check-deploy-gradle-action/issues/898)) ([e68e836](https://github.com/DanySK/build-check-deploy-gradle-action/commit/e68e836e1210b328510fc7707ab668e16049cd8a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.138 ([#899](https://github.com/DanySK/build-check-deploy-gradle-action/issues/899)) ([119538a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/119538ac8b40beb08ad113b5bc4f50d52312ac8b))
+* **deps:** update node.js to 22.17 ([#891](https://github.com/DanySK/build-check-deploy-gradle-action/issues/891)) ([16b8806](https://github.com/DanySK/build-check-deploy-gradle-action/commit/16b8806476662547b310129d5360eee7754cbd0c))
+* **deps:** update node.js to 22.18 ([#900](https://github.com/DanySK/build-check-deploy-gradle-action/issues/900)) ([eced7a5](https://github.com/DanySK/build-check-deploy-gradle-action/commit/eced7a592b1cf2a41899515312c8222e69a54a62))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.30 ([#890](https://github.com/DanySK/build-check-deploy-gradle-action/issues/890)) ([b19e3f6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b19e3f67f2a9ce262001d360c8390c8aab35dc4c))
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.32 ([#892](https://github.com/DanySK/build-check-deploy-gradle-action/issues/892)) ([83398aa](https://github.com/DanySK/build-check-deploy-gradle-action/commit/83398aae6cc4ecebf150f12543432ba216e57e32))
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.33 ([#895](https://github.com/DanySK/build-check-deploy-gradle-action/issues/895)) ([660c69b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/660c69bfcfe14a4b5bec1bda5d431b3f1942ad4b))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.2.10 ([#889](https://github.com/DanySK/build-check-deploy-gradle-action/issues/889)) ([930606b](https://github.com/DanySK/build-check-deploy-gradle-action/commit/930606b104b6f95c6fa75152254950e74520364a))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.2.11 ([#897](https://github.com/DanySK/build-check-deploy-gradle-action/issues/897)) ([f92e0a7](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f92e0a77155298d85ef53d4378235bef38b0113c))
+
 ## [4.0.1](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.0...4.0.1) (2025-06-12)
 
 ### Dependency updates
