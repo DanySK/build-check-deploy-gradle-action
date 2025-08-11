@@ -41,11 +41,11 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4.3.0
         with:
           path: 'action'
       - name: Checkout test repo
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4.3.0
         with:
           repository: ${{ matrix.test[0] }}
           path: 'target'
@@ -68,11 +68,11 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout the Gradle wrapper
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4.3.0
         with:
           repository: DanySK/gradle-wrapper
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4.3.0
         with:
           path: 'action'
       - uses: ./action
@@ -127,7 +127,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4.3.0
         with:
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Install Node
