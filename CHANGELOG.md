@@ -1,3 +1,18 @@
+## [4.0.4](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.3...4.0.4) (2025-08-20)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.5.0 ([#911](https://github.com/DanySK/build-check-deploy-gradle-action/issues/911)) ([3a650e2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3a650e2909cbab9d8ff97b8b2cd375e55fca188a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.140 ([#910](https://github.com/DanySK/build-check-deploy-gradle-action/issues/910)) ([0fc81c5](https://github.com/DanySK/build-check-deploy-gradle-action/commit/0fc81c5341bf3084b281aa60aad67fe9d7b73cf4))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v5 ([#905](https://github.com/DanySK/build-check-deploy-gradle-action/issues/905)) ([7b9495a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7b9495a221d4556f03e62f0eff2003936dd008a0))
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.34 ([#908](https://github.com/DanySK/build-check-deploy-gradle-action/issues/908)) ([3f2264a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3f2264a805155cca33df5ce5cd47c48a3bec3cb5))
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.35 ([#909](https://github.com/DanySK/build-check-deploy-gradle-action/issues/909)) ([c00ec5d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c00ec5dbc032d108577bfafc1037239d5b827884))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.3.1 ([#906](https://github.com/DanySK/build-check-deploy-gradle-action/issues/906)) ([429b9e8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/429b9e88212e18988cf164f97ee258b395ac2535))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.3.2 ([#907](https://github.com/DanySK/build-check-deploy-gradle-action/issues/907)) ([86b601f](https://github.com/DanySK/build-check-deploy-gradle-action/commit/86b601f5d989a07d2428abfc12c848e00b21b967))
+
 ## [4.0.3](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.2...4.0.3) (2025-08-07)
 
 ### Dependency updates
