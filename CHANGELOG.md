@@ -1,3 +1,15 @@
+## [4.0.9](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.8...4.0.9) (2025-09-29)
+
+### Dependency updates
+
+* **core-deps:** update gradle/actions action to v4.4.4 ([#929](https://github.com/DanySK/build-check-deploy-gradle-action/issues/929)) ([90e3f85](https://github.com/DanySK/build-check-deploy-gradle-action/commit/90e3f85517ab1f998489325d42ac5ead6abcf110))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.146 ([#927](https://github.com/DanySK/build-check-deploy-gradle-action/issues/927)) ([7f3ad97](https://github.com/DanySK/build-check-deploy-gradle-action/commit/7f3ad9705cae291ff09e6b1ceb24d462575362f9))
+* **deps:** update node.js to 22.20 ([#928](https://github.com/DanySK/build-check-deploy-gradle-action/issues/928)) ([ab7b149](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ab7b149c90744d22d63126892ef0eea03fd4bbf5))
+
+### Build and continuous integration
+
+* **deps:** update dependency macos github actions runner to v15 ([#926](https://github.com/DanySK/build-check-deploy-gradle-action/issues/926)) ([f62539d](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f62539d0fdc11f9ee64ee5f5a667add5141aa814))
+
 ## [4.0.8](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.7...4.0.8) (2025-09-24)
 
 ### Dependency updates
