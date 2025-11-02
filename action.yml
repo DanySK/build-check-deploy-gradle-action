@@ -292,24 +292,30 @@ runs:
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: ./gradlew --stop
-    - name: Force-kill the remaining Gradle Daemons on Windows
+    - name: Kill Gradle-related Java and clean Gradle cache with retry
       if: ${{ runner.os == 'Windows' }}
       shell: powershell
       run: |
-        try {
-            $gradleProcesses = Get-Process java -ErrorAction Stop | Where-Object { $_.CommandLine -like "*GradleDaemon*" }
-            if ($gradleProcesses) {
-                Stop-Process -InputObject $gradleProcesses -ErrorAction SilentlyContinue
-                Write-Host "Gradle Daemon processes have been stopped."
-            } 
-            else {
-                Write-Host "No Gradle Daemon processes found."
+        # 1) Kill common lock holders
+        $pattern = 'GradleDaemon|org\.gradle\.launcher|kotlin\.daemon|org\.gradle\.vfs'
+        $java = Get-Process java -ErrorAction SilentlyContinue | Where-Object {
+          $_.CommandLine -and ($_.CommandLine -match $pattern)
+        }
+        if ($java) { $java | Stop-Process -Force -ErrorAction SilentlyContinue }
+        # 2) Remove GRADLE_USER_HOME (fallback to %USERPROFILE%\.gradle) with retry
+        $dir = if ($env:GRADLE_USER_HOME) { $env:GRADLE_USER_HOME } else { Join-Path $env:USERPROFILE ".gradle" }
+        if (Test-Path $dir) {
+          for ($i = 0; $i -lt 8; $i++) {
+            try {
+              Remove-Item -Recurse -Force $dir
+              Write-Host "Removed $dir"
+              break
+            } catch {
+              Start-Sleep -Seconds 2
+              if ($i -eq 7) { Write-Host "Could not remove $dir after retries; continuing" }
             }
+          }
         }
-        catch {
-            Write-Host "No Java processes found. Nothing to terminate."
-        }
-
     - name: Cleanup the Gradle cache
       if: ${{ runner.os != 'Windows' }}
       shell: bash
