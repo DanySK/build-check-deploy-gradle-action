@@ -1,3 +1,10 @@
+## [4.0.12](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.11...4.0.12) (2025-11-03)
+
+### Dependency updates
+
+* **core-deps:** update al-cheb/configure-pagefile-action action to v1.5 ([#948](https://github.com/DanySK/build-check-deploy-gradle-action/issues/948)) ([b13a7f3](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b13a7f3ca8e14f2d78af9b1a20325931de7f69fe))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.153 ([#947](https://github.com/DanySK/build-check-deploy-gradle-action/issues/947)) ([88990a8](https://github.com/DanySK/build-check-deploy-gradle-action/commit/88990a81db15073415d7bb6efdd885988ab472da))
+
 ## [4.0.11](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.10...4.0.11) (2025-11-02)
 
 ### Dependency updates
