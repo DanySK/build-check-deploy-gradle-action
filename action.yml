@@ -145,7 +145,7 @@ runs:
         gpg-passphrase: SIGNING_PASSWORD
     - name: Configure the Windows Pagefile
       if: ${{ runner.os == 'Windows' }}
-      uses: al-cheb/configure-pagefile-action@v1.4
+      uses: al-cheb/configure-pagefile-action@v1.5
       with:
         disk-root: 'C:'
     - name: Cache Gradle packages
