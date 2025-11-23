@@ -158,14 +158,7 @@ runs:
       uses: actions/cache@v4.3.0
       with:
         path: "~/.konan"
-        key: ${{ runner.os }}-konan-${{ hashFiles(
-            'gradle/*.versions.toml',
-            '*/gradle/*.versions.toml',
-            '*/*/gradle/*.versions.toml',
-            '*.gradle.kts',
-            '*/*.gradle.kts',
-            '*/*/*.gradle.kts'
-          ) }}
+        key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', '**/gradle/*.toml') }}
         restore-keys: |
           ${{ runner.os }}-konan-
     - name: UUID generation
