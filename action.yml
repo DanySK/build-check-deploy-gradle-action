@@ -235,7 +235,7 @@ runs:
       run: echo '::error title=Codecov enabled but no Codecov token provided::Please set the `codecov-token` input with the appropriate Codecov token'
     - name: CodeCov
       if: inputs.should-run-codecov == 'true'
-      uses: codecov/codecov-action@v5.5.1
+      uses: codecov/codecov-action@v5.5.2
       with:
         directory: ${{ inputs.codecov-directory }}
         token: ${{ inputs.codecov-token }}
