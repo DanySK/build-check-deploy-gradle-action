@@ -1,3 +1,9 @@
+## [4.0.14](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.13...4.0.14) (2025-12-09)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.5.2 ([#960](https://github.com/DanySK/build-check-deploy-gradle-action/issues/960)) ([c118e96](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c118e963156523e9bca8f488075b08a666bb5922))
+
 ## [4.0.13](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.12...4.0.13) (2025-12-04)
 
 ### Dependency updates
