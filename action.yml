@@ -163,7 +163,7 @@ runs:
           ${{ runner.os }}-konan-
     - name: UUID generation
       id: uuid
-      uses: danysk/uuid-action@2.0.1
+      uses: danysk/uuid-action@2.0.2
     - name: Pre-build
       working-directory: ${{ inputs.working-directory }}
       shell: bash
