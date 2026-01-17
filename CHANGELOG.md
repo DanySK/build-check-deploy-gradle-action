@@ -1,3 +1,14 @@
+## [4.0.19](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.18...4.0.19) (2026-01-17)
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v5.0.2 ([#970](https://github.com/DanySK/build-check-deploy-gradle-action/issues/970)) ([9e8bd25](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9e8bd25854bb0011073dd8561eaa165a01e0827b))
+* **deps:** update node.js to 24.13 ([#968](https://github.com/DanySK/build-check-deploy-gradle-action/issues/968)) ([10848d1](https://github.com/DanySK/build-check-deploy-gradle-action/commit/10848d10d210b62a4111b324400412b240aa57f8))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6.2.0 ([#969](https://github.com/DanySK/build-check-deploy-gradle-action/issues/969)) ([83bf2c4](https://github.com/DanySK/build-check-deploy-gradle-action/commit/83bf2c49550e3559779f4e0366f3e56bd240f404))
+
 ## [4.0.18](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.17...4.0.18) (2026-01-11)
 
 ### Dependency updates
