@@ -1,3 +1,14 @@
+## [4.0.20](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.19...4.0.20) (2026-01-22)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v5.2.0 ([#973](https://github.com/DanySK/build-check-deploy-gradle-action/issues/973)) ([8b0f704](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8b0f7042d05c9b467c58479fb0a7fee2416c7c10))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.44 ([#971](https://github.com/DanySK/build-check-deploy-gradle-action/issues/971)) ([3689c31](https://github.com/DanySK/build-check-deploy-gradle-action/commit/3689c3109f6223e421ea73bb9a510719857a966f))
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.45 ([#972](https://github.com/DanySK/build-check-deploy-gradle-action/issues/972)) ([bba5b95](https://github.com/DanySK/build-check-deploy-gradle-action/commit/bba5b95eaed60f4741c437ce3260d45797cbb44c))
+
 ## [4.0.19](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.18...4.0.19) (2026-01-17)
 
 ### Dependency updates
