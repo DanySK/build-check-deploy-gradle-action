@@ -1,3 +1,13 @@
+## [4.0.23](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.22...4.0.23) (2026-01-31)
+
+### Dependency updates
+
+* **core-deps:** update danysk/uuid-action action to v2.0.4 ([#978](https://github.com/DanySK/build-check-deploy-gradle-action/issues/978)) ([a8494fb](https://github.com/DanySK/build-check-deploy-gradle-action/commit/a8494fb7d76a2ed8e5860fcaabf88a796b34c8f3))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins action to v2.0.46 ([#977](https://github.com/DanySK/build-check-deploy-gradle-action/issues/977)) ([0e3ce13](https://github.com/DanySK/build-check-deploy-gradle-action/commit/0e3ce13e2a6a8d36430eca50ec1ae2019e30b3bf))
+
 ## [4.0.22](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.21...4.0.22) (2026-01-29)
 
 ### Dependency updates
