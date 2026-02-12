@@ -22,7 +22,7 @@ jobs:
         run: |
           USES=$(cat <<TRICK_RENOVATE
           - uses: DanySK/Template-for-Gradle-Plugins@2.0.46
-          - uses: DanySK/Template-for-Kotlin-Multiplatform-Projects@0.3.6
+          - uses: DanySK/Template-for-Kotlin-Multiplatform-Projects@0.3.7
           TRICK_RENOVATE
           )
           export USES="$USES"
