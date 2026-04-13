@@ -1,3 +1,9 @@
+## [4.0.32](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.31...4.0.32) (2026-04-13)
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v5.0.5 ([#994](https://github.com/DanySK/build-check-deploy-gradle-action/issues/994)) ([dbd9ea4](https://github.com/DanySK/build-check-deploy-gradle-action/commit/dbd9ea43beb216759504ef2e3ca4c3a60781412b))
+
 ## [4.0.31](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.30...4.0.31) (2026-04-03)
 
 ### Dependency updates
