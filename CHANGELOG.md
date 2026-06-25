@@ -1,3 +1,9 @@
+## [4.0.38](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.37...4.0.38) (2026-06-25)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v5.4.0 ([#1015](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1015)) ([8b8b6f2](https://github.com/DanySK/build-check-deploy-gradle-action/commit/8b8b6f298b38a6e26ea53fd8d4e94d454e2a4f95))
+
 ## [4.0.37](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.36...4.0.37) (2026-06-23)
 
 ### Dependency updates
