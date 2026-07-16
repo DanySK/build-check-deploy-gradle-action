@@ -1,3 +1,16 @@
+## [4.0.41](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.40...4.0.41) (2026-07-16)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v5.6.0 ([#1024](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1024)) ([ff91ed7](https://github.com/DanySK/build-check-deploy-gradle-action/commit/ff91ed73798053ab2195e132aed9f714b4284bc5))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6.5.0 ([#1020](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1020)) ([41cf053](https://github.com/DanySK/build-check-deploy-gradle-action/commit/41cf053be1b5475797f178d5f048115dc8229927))
+* **deps:** update actions/setup-node action to v7 ([#1021](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1021)) ([7048767](https://github.com/DanySK/build-check-deploy-gradle-action/commit/704876787929949dd55ca989e1830c696ca535ba))
+* **deps:** update danysk/template-for-gradle-plugins action to v2.1.8 ([#1022](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1022)) ([983c4dc](https://github.com/DanySK/build-check-deploy-gradle-action/commit/983c4dc2c9d0b91b446c55aa0cbe420b53482187))
+* **deps:** update danysk/template-for-kotlin-multiplatform-projects action to v0.3.12 ([#1023](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1023)) ([fac3e1c](https://github.com/DanySK/build-check-deploy-gradle-action/commit/fac3e1cdf5c4d4b86e809f5e21ce62da82d146a9))
+
 ## [4.0.40](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.39...4.0.40) (2026-07-07)
 
 ### Dependency updates
