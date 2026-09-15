@@ -1,3 +1,10 @@
+## [4.0.46](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.45...4.0.46) (2026-09-15)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v7.1.0 ([#1037](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1037)) ([d84d185](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d84d185e5bc4715f64b89962c3b9e388a853a1b1))
+* **deps:** update node.js to 24.21 ([#1036](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1036)) ([c10baa7](https://github.com/DanySK/build-check-deploy-gradle-action/commit/c10baa78893d1224c6de36380fa3f3cbed4ffa64))
+
 ## [4.0.45](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.44...4.0.45) (2026-09-09)
 
 ### Dependency updates
