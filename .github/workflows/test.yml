@@ -9,7 +9,7 @@ on:
 
 jobs:
   select-tests:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     concurrency:
       group: ${{ github.workflow }}-select-tests-${{ github.event.number || github.ref }}
       cancel-in-progress: true
@@ -65,7 +65,7 @@ jobs:
           working-directory: target
           should-run-codecov: false
   failure-tests:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout the Gradle wrapper
         uses: actions/checkout@v7.0.1
@@ -124,7 +124,7 @@ jobs:
     needs:
       - test
       - failure-tests
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -141,7 +141,7 @@ jobs:
           npm install
           npx semantic-release
   success:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs:
       - select-tests
       - test
