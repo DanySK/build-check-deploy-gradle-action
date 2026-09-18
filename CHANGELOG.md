@@ -1,3 +1,13 @@
+## [4.0.47](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.46...4.0.47) (2026-09-18)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v7.1.1 ([#1038](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1038)) ([63e69ec](https://github.com/DanySK/build-check-deploy-gradle-action/commit/63e69ec3ea68afece0b534106808603d621e66aa))
+
+### Build and continuous integration
+
+* **deps:** update dependency ubuntu to v26 ([#1039](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1039)) ([729cfb6](https://github.com/DanySK/build-check-deploy-gradle-action/commit/729cfb60ab496e69ed87b0701216144ddc6b8219))
+
 ## [4.0.46](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.45...4.0.46) (2026-09-15)
 
 ### Dependency updates
