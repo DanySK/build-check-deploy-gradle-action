@@ -1,3 +1,16 @@
+## [4.0.50](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.49...4.0.50) (2026-10-28)
+
+### Dependency updates
+
+* **core-deps:** update gradle/actions action to v6.4.1 ([95815ed](https://github.com/DanySK/build-check-deploy-gradle-action/commit/95815ed2f73fe785a0fe81c424ffbc79c895a958))
+* **deps:** update node.js to 24.22 ([#1047](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1047)) ([9485616](https://github.com/DanySK/build-check-deploy-gradle-action/commit/9485616fe2654b431d459cb8e02eaa4ca2218fbe))
+
+### Build and continuous integration
+
+* **deps:** update danysk/template-for-gradle-plugins action to v2.1.15 ([#1050](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1050)) ([d63d721](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d63d72177ac2a3e6a7c0f537e650ba8894dec113))
+* **deps:** update dependency macos github actions runner to v26 ([#1048](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1048)) ([b2cb768](https://github.com/DanySK/build-check-deploy-gradle-action/commit/b2cb7686309af3445110d0f4d1e975dbfed2f317))
+* **deps:** update dependency ubuntu github actions runner to v26 ([#1049](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1049)) ([f0db6dc](https://github.com/DanySK/build-check-deploy-gradle-action/commit/f0db6dca7ed9104edc56e016328e44e210b0c63d))
+
 ## [4.0.49](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.48...4.0.49) (2026-10-14)
 
 ### Dependency updates
