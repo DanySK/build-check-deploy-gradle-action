@@ -1,3 +1,10 @@
+## [4.0.51](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.50...4.0.51) (2026-11-05)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v6.2.0 ([65bf872](https://github.com/DanySK/build-check-deploy-gradle-action/commit/65bf872ce9ec2aed2554a65ff212746243ca4e6c))
+* **deps:** update node.js to v26 ([#1052](https://github.com/DanySK/build-check-deploy-gradle-action/issues/1052)) ([d49ac0a](https://github.com/DanySK/build-check-deploy-gradle-action/commit/d49ac0aa428e84c48952a8aff9898e6ae3d72836))
+
 ## [4.0.50](https://github.com/DanySK/build-check-deploy-gradle-action/compare/4.0.49...4.0.50) (2026-10-28)
 
 ### Dependency updates
